@@ -1,0 +1,65 @@
+* {
+    font-family: "Noto Sans JP", sans-serif;
+}
+body {
+    background: #fff;
+    color: var(--main);
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    line-height: 1.8;
+}
+img {
+    vertical-align: bottom;
+}
+
+// メディアクエリ ///////////////////////////////////////////////////////////////
+$breakpoints: (
+    's': 'screen and (min-width: 640px)',
+    'm': 'screen and (min-width: 768px)',
+    'l': 'screen and (min-width: 1024px)',
+    'xl': 'screen and (min-width: 1200px)',
+) !default;
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+// レイアウト ///////////////////////////////////////////////////////////////
+@mixin flex() {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// カラム分け ///////////////////////////////////////////////////////////////
+@mixin col-2() {
+    margin: 0;
+    margin-right: 4%;
+    width: 48%;
+}
+@mixin col-3() {
+    margin: 0;
+    margin-right: 5%;
+    width: 30%;
+}
+
+// 装飾 ///////////////////////////////////////////////////////////////
+@mixin list-none() {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+@mixin marker() {
+    background: linear-gradient(transparent 60%,#ff6 60%);
+}
+
+// ボタン ///////////////////////////////////////////////////////////////
+@mixin btn($fz) {
+    border-radius: 50px;
+    display: block;
+    font-size: $fz;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-align: center;
+    text-decoration: none;
+}

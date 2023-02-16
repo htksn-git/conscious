@@ -1,0 +1,113 @@
+// トグルボタンの設置位置
+@mixin modal-btn-position() {
+    top: 22px;
+    right: 20px;
+}
+
+.modal {
+    &__area {
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+    &__bg {
+        background-color: rgba(0, 0, 0, .7);
+        width: 100%;
+        height: 100%;
+    }
+    &__wrapper {
+        background: #f8f7f6;
+        height: 100%;
+        padding: 120px 60px 30px 40px;
+        position: absolute;
+        overflow-y: scroll;
+        top: 0;
+        right: 0;
+        width: 400px;
+        max-width: 90%;
+    }
+    /* ボタンスタイル */
+    &__open {
+        @include modal-btn-position();
+        cursor: pointer;
+        display: block;
+        width: 36px;
+        height: 44px;
+        position: fixed;
+        transition: all .3s ease;
+        z-index: 100;
+
+        &-btn {
+            background: #333;
+            display: block;
+            width: 32px;
+            height: 2px;
+            margin: auto;
+            position: absolute;
+            top: 12px;
+            left: 0;
+            right: 0;
+            transition: all 0.3s ease-in-out 0s;
+    
+            &::before, &::after {
+                content: '';
+                background: #333;
+                display: block;
+                width: 100%;
+                height: 100%;
+                margin: -8% 0 0 -50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: rotate(0);
+                transition: all 0.3s ease-in-out;
+            }
+            &::before {
+                margin-top: -11px;
+            }
+            &::after {
+                margin-top: 8px;
+            }
+        }
+        &-label {
+            display: block;
+            font-size: 10px;
+            font-weight: bold;
+            padding-top: 26px;
+            text-align: center;
+        }
+    
+        &.close {
+            .modal__open-btn {
+                background: rgba(0, 0, 0, 0) !important;
+
+                &::before,
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    margin: -8% 0 0 -60%;
+                    padding-right: 7px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                }
+                &::before {
+                    transform: rotate(-45deg);
+                }
+                &::after {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+}
+
+body.scrollStop {
+    overflow: hidden;
+}

@@ -1,0 +1,33 @@
+.header {
+    &__wrap {
+        @include flex();
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+        width: calc(100% - 60px);
+    }
+    &__logo {
+        &-href {
+            display: block;
+            width: 180px;
+        }
+    }
+    &__ul {
+        @include flex();
+
+        li {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        a {
+            display: block;
+            padding: 20px 15px;
+
+            &:hover {
+                background: var(--text-main);
+                color: #fff;
+            }
+        }
+    }
+}

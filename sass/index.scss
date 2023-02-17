@@ -1,0 +1,43 @@
+.index {
+    background: #eee;
+    padding: 40px 0;
+    
+    &-header {
+        @include wrap-index();
+
+        &__title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+    &-card {
+        margin-top: 30px;
+
+        &__wrap {
+            @include flex();
+            @include wrap-index();
+        }
+        &__href {
+            @include col-3();
+            background: rgba(255, 255, 255, .5);
+            box-shadow: 0 4px 16px rgb(0 0 0 / 13%), 0 12px 28px -12px rgb(0 0 0 / 8%);
+            border-radius: 4px;
+            margin-bottom: 30px;
+            padding: 20px;
+
+            &:hover {
+                box-shadow: none;
+            }
+        }
+        &__title {
+            border-bottom: 1px solid #eee;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.4;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            text-align: justify;
+        }
+    }
+}

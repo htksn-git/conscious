@@ -1,0 +1,21 @@
+.article-site {
+    &__dt {
+        background: #eee;
+        display: inline-block;
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 5px;
+        padding: 2px 20px;
+        text-align: center;
+    }
+    &__ul {
+        padding-left: 20px;
+    }
+    &__list {
+        color: #ddd;
+        list-style: disc;
+    }
+    &__href {
+        color: #555;
+    }
+}

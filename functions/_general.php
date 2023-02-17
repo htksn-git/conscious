@@ -1,7 +1,7 @@
 <?php if ( !defined( 'ABSPATH' ) ) exit;
 
 // 管理画面バー非表示 ////////////////////////////////////
-// add_filter('show_admin_bar', '__return_false');
+add_filter('show_admin_bar', '__return_false');
 
 // CSS 読み込み ////////////////////////////////////
 function loading_css() {
@@ -13,7 +13,7 @@ add_action('wp_enqueue_scripts', 'loading_css');
 function loading_js() {
 	wp_enqueue_script('modal', get_template_directory_uri().'/js/modal.js');
 	wp_enqueue_script('pagetop', get_template_directory_uri().'/js/pagetop.js');
-  wp_enqueue_script('main', get_template_directory_uri().'/js/main.js', array( 'jquery' ), '', true);	
+  wp_enqueue_script('copy-button', get_template_directory_uri().'/js/copy-button.js', array( 'jquery' ), '', true);	
 }
 add_action('wp_enqueue_scripts', 'loading_js');
 

@@ -2,19 +2,34 @@
 
 <?php get_header(); ?>
 
-<nav class="index-card">
-<?php if(have_posts()): while(have_posts()): the_post(); ?>
-	<a class="index-card__href" href="<?php the_permalink(); ?>">
-		<div class="index-card__thumbnail"><?php the_post_thumbnail('tmb_sort'); ?></div>
-		<h3 class="index-card__title"><?php the_title(); ?></h3>
-		<div class="index-card__excerpt"><?php echo mb_substr(get_the_excerpt(), 0, 140).'';?></div>
-	</a>
-<?php endwhile; endif; ?>
-</nav>
+<article class="index">
+
+	<?php if ( is_category() || is_tag() ): ?>
+		<header class="index-header">
+		<?php if ( is_category() ): ?>
+		<h1 class="index-header__title"><?php echo get_category_name(); ?></h1>
+		<?php elseif ( is_tag() ): ?>
+		<h1 class="index-header__title"><?php // echo get_tag_name(); ?></h1>
+		<?php endif; ?>
+		<?php the_field('acf_category_editor'); ?>
+	</header>
+	<?php endif; ?>
+
+
+	<section class="index-card">
+		<nav class="index-card__wrap">
+		<?php if(have_posts()): while(have_posts()): the_post(); ?>
+
+			<?php // カード
+			get_template_part('tmp/index-card'); ?>
+
+		<?php endwhile; endif; ?>
+		</nav>
+	</section>
+
+</article>
 
 <?php // ページャー
 get_template_part('tmp/pager'); ?>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

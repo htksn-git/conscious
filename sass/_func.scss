@@ -1,15 +1,25 @@
 * {
     font-family: "Noto Sans JP", sans-serif;
 }
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
 body {
     background: #fff;
-    color: var(--main);
+    color: var(--text-main);
     font-size: 16px;
     letter-spacing: 0.04em;
     line-height: 1.8;
 }
 img {
     vertical-align: bottom;
+}
+a, a:hover {
+    transition: all .3s ease;
 }
 
 // メディアクエリ ///////////////////////////////////////////////////////////////
@@ -25,7 +35,15 @@ $breakpoints: (
     }
 }
 
-// レイアウト ///////////////////////////////////////////////////////////////
+// wrapper ///////////////////////////////////////////////////////////////
+@mixin wrap-index() {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+// flex ///////////////////////////////////////////////////////////////
 @mixin flex() {
     display: flex;
     flex-wrap: wrap;
@@ -33,14 +51,32 @@ $breakpoints: (
 
 // カラム分け ///////////////////////////////////////////////////////////////
 @mixin col-2() {
-    margin: 0;
+    display: block;
     margin-right: 4%;
     width: 48%;
+
+    &:nth-child(2n) {
+        margin-right: 0;
+    }
 }
 @mixin col-3() {
-    margin: 0;
-    margin-right: 5%;
-    width: 30%;
+    display: block;
+    margin-right: 3%;
+    width: 31.3333333333%;
+
+    &:nth-child(3n) {
+        margin-right: 0;
+    }
+}
+
+// ヘッダー ///////////////////////////////////////////////////////////////
+@mixin header-background($img, $pos1, $pos2, $height) {
+    background-image: url($img);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: $pos1 $pos2;
+    width: 100%;
+    height: $height;
 }
 
 // 装飾 ///////////////////////////////////////////////////////////////
@@ -53,7 +89,69 @@ $breakpoints: (
     background: linear-gradient(transparent 60%,#ff6 60%);
 }
 
-// ボタン ///////////////////////////////////////////////////////////////
+// icon ///////////////////////////////////////////////////////////////
+@mixin category-icon-default() {
+    background-repeat: no-repeat;
+    background-position: 0 center;
+}
+@mixin category-icon($size, $height, $padding) {
+    background-size: $size;
+    display: block;
+    line-height: $height;
+    height: $height;
+    padding-left: $padding;
+}
+
+.wordpress {
+    @include category-icon-default();
+    background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/wordpress.svg);
+}
+.python {
+    @include category-icon-default();
+    background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/python.svg);
+}
+.javascript {
+    @include category-icon-default();
+    background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/javascript.svg);
+}
+.html {
+    @include category-icon-default();
+    background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/html.svg);
+}
+.css {
+    @include category-icon-default();
+    background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/css.svg);
+}
+.git-github {
+    @include category-icon-default();
+    background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/git-github.svg);
+}
+.shopify {
+    @include category-icon-default();
+    background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/shopify.svg);
+}
+.linux {
+    @include category-icon-default();
+    background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/linux.svg);
+}
+.ruby {
+    @include category-icon-default();
+    background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/ruby.svg);
+}
+.hugo {
+    @include category-icon-default();
+    background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/hugo.svg);
+}
+.spread-sheets {
+    @include category-icon-default();
+    background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/spread-sheets.svg);
+}
+.tools {
+    @include category-icon-default();
+    background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/tools.svg);
+}
+
+// button ///////////////////////////////////////////////////////////////
 @mixin btn($fz) {
     border-radius: 50px;
     display: block;

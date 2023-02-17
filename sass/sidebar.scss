@@ -1,0 +1,24 @@
+.sidebar {
+    background: var(--light-blue);
+    border-radius: 0 0 0 30px;
+    height: 100vh;
+    padding: 20px;
+    width: 30%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+
+    &__section {
+        margin-bottom: 50px;
+    }
+    &__title {
+        font-family: 'Oswald', sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .category-icon {
+        @include category-icon(40px, 46px, 50px);
+        font-weight: 500;
+    }
+}

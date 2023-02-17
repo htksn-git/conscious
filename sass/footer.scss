@@ -1,0 +1,34 @@
+.footer {
+    @include header-background("http://localhost:8888/conscious/wp-content/img/common/footer.jpg", center, bottom, inherit);
+    margin-top: 50px;
+    min-height: 400px;
+    
+    &__wrap {
+        @include flex();
+        justify-content: space-between;
+        padding: 50px;
+    }
+    &__logo {
+        display: block;
+        margin: 20px auto 20px;
+        width: 80%;
+    }
+    &__nav {
+        @include col-3();
+        background: rgba(255, 255, 255, .3);
+        border-radius: 4px;
+        padding: 20px;
+
+        a {
+            color: #fff;
+            font-weight: 500;
+        }
+    }
+    &__copyright {
+        color: #999;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        padding: 0 0 10px;
+        text-align: center;
+    }
+}

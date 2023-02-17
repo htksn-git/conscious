@@ -1,0 +1,13 @@
+.post-meta {
+    @include flex();
+    font-size: 13px;
+    font-family: 'Oswald', sans-serif;
+
+    dt {
+        font-weight: 500;
+        width: 80px;
+    }
+    dd {
+        width: calc(100% - 80px);
+    }
+}

@@ -6,20 +6,38 @@
 <?php if(have_posts()): while(have_posts()): the_post(); ?>
 
   <header class="single-article__header" itemprop="headline">
-    <h1 class="single-article__title"><?php the_title(); ?></h1>
-    <?php // 日付タグ
-    get_template_part('tmp/date'); ?>
-    <?php the_post_thumbnail(); ?>
+    <div class="single-article__header-meta">
+      <h1 class="single-article__title"><?php the_title(); ?></h1>
+      <?php // 投稿メタ情報
+      get_template_part('tmp/post-meta'); ?>
+    </div>
   </header>
+  
+  <div class="single-article__wrapper">
 
-  <section class="single-article__content" itemprop="mainEntityOfPage">
-    <?php add_filter('the_content', 'wpautop'); ?>
-    <?php the_content(); ?>
-  </section>
+    <div class="single-article__content">
+      <div class="single-article__content-wrapper">
+        <?php // パンくずリスト
+        get_template_part('tmp/breadcrumbs'); ?>
+        <?php the_post_thumbnail(); ?>
+
+        <main class="single-article__main" itemprop="mainEntityOfPage">
+          <?php add_filter('the_content', 'wpautop'); ?>
+          <?php the_content(); ?>
+        </main>
+
+        <aside class="site">
+        <?php // 参考サイト
+        get_template_part('tmp/site'); ?>
+        </aside>
+
+      </div>
+    </div>
+
+    <?php get_sidebar(); ?>
+  </div>
 
 <?php endwhile; endif; ?>
 </article>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

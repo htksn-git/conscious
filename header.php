@@ -29,5 +29,17 @@
     <a href="<?php bloginfo('url'); ?>/" class="header__logo-href" itemprop="url">
       <img class="header__logo" src="<?php bloginfo('url'); ?>/wp-content/img/common/logo.svg" alt="conscious" itemprop="name about">
     </a>
+
+    <?php // 検索フォーム
+    get_template_part('tmp/search-form'); ?>
+
+    <nav class="header__nav">
+      <ul class="header__ul">
+        <li><a href="<?php bloginfo('url'); ?>/">HOME</a></li>
+        <li><a href="<?php bloginfo('url'); ?>/blog/">BLOG</a></li>
+        <li><a href="<?php bloginfo('url'); ?>/info/">INFO</a></li>
+        <li><a href="<?php bloginfo('url'); ?>/contact/">CONTACT</a></li>
+      </ul>
+    </nav>
   </div>
 </header>

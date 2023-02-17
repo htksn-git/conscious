@@ -1,0 +1,72 @@
+.single-article__main, .page-article__main {
+    h2 {
+        border-bottom: 2px solid var(--text-main);
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 1.4;
+        margin: 2em 0 1em;
+        padding: 5px 10px;
+    }
+    h3 {
+        border-left: 2px solid var(--text-main);
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.4;
+        margin: 2em 0 1em;
+        padding: 5px 10px;
+    }
+    h4 {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.4;
+        margin: 2em 0 1em;
+    }
+    p {
+        margin-bottom: 1em;
+    }
+    a {
+        color: var(--link);
+    }
+    ul, ol {
+        margin: 1rem 0;
+        padding-left: 40px;
+    }
+    ul {
+        
+        li {
+            list-style: disc;
+        }
+        ul, ol {
+            margin: 0;
+            padding-left: 40px;
+        }
+    }
+    ol {
+        
+        li {
+            list-style: decimal;
+        }
+        ul, ol {
+            margin: 0;
+            padding-left: 40px;
+        }
+    }
+    li {
+        margin: 0.2em 0;
+    }
+    blockquote {
+        background: #f5f5f5;
+        margin: 1.5rem 0;
+        padding: 1.1em 1.2em .1em 1.2em;
+    }
+
+    // ワードプレス タグ
+    .wp-block-separator { // hrタグ
+        border: none;
+        background: var(--text-main);
+        display: block;
+        height: 1px;
+        margin: 1.5rem 0;
+        opacity: 0.4;
+    }
+}

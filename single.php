@@ -26,10 +26,8 @@
           <?php the_content(); ?>
         </main>
 
-        <aside class="site">
         <?php // 参考サイト
         get_template_part('tmp/site'); ?>
-        </aside>
 
       </div>
     </div>

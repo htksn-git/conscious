@@ -1,0 +1,20 @@
+.page-bottom {
+    padding: 50px 0 0;
+    &__category {
+        @include wrap-index();
+        
+        .categories-link {
+            @include flex();
+            justify-content: center;
+
+            &__list {
+                margin: 5px 25px;
+            }
+        }
+        .category-icon {
+            @include category-icon(36px, 46px, 40px);
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+}

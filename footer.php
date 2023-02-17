@@ -1,10 +1,9 @@
 <?php if ( !defined( 'ABSPATH' ) ) exit; ?>
 
-<nav class="footer-categories">
-  <?php // カテゴリー一覧
-  $args = ['pad_counts' => false];
-  get_template_part('tmp/categories-link', null, $args); ?>
-</nav>
+<section class="page-bottom">
+  <?php // ページ下部コンテンツ
+  get_template_part('tmp/page-bottom'); ?>
+</section>
 
 <footer class="footer" itemscope itemtype="https://schema.org/WPFooter">
   <div class="footer__wrap">

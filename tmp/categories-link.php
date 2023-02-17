@@ -12,8 +12,7 @@
   $categories = get_categories( $args );
 ?>
 
-<nav class="categories-link">
-  <ul class="categories-link__ul">
+<ul class="categories-link">
   <?php foreach( $categories as $category ) : ?>
     <li class="categories-link__list">
       <a class="categories-link__href category-icon <?php echo $category->slug; ?>" href="<?php echo get_category_link( $category->term_id ); ?>">
@@ -25,5 +24,4 @@
       </a>
     </li>
   <?php endforeach; ?>
-  </ul>
-</nav>
+</ul>

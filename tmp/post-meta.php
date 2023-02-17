@@ -2,24 +2,17 @@
 
 <?php // 現在のページが属する情報を取得
   global $post;
-  $cat = get_the_category(); //カテゴリー情報を取得
-  $cat = $cat[0];
-  $cat_name = $cat->name;
-  $cat_slug = $cat->slug;
-
-  $tag = get_the_tags(); //タグ情報を取得
-  $tag = $tag[0];
-  $tag_name = $tag->name;
-  $tag_slug = $tag->slug;
+  $tags = get_the_tags(); //タグ情報を取得
+  $tags_num = count($tags);
 ?>
 
 <dl class="post-meta">
-<dt>Post on</dt>
-<dd><?php get_template_part('tmp/date'); ?></dd>
-<dt>Category</dt>
-<dd><?php echo $cat_name; ?></dd>
-<?php if ($tag_name != ''): ?>
-<dt>Tags</dt>
-<dd><?php echo $tag_name; ?></dd>
-<?php endif; ?>
+  <dt>Post on</dt>
+  <dd><?php get_template_part('tmp/date'); ?></dd>
+  <dt>Category</dt>
+  <dd><?php the_category(); ?></dd>
+  <?php if ($tags_num != 0): ?>
+  <dt>Tags</dt>
+  <dd><?php the_tags( '<ul class="post-meta__tags"><li>', '</li><li>', '</li></ul>' ); ?></dd>
+  <?php endif; ?>
 </dl>

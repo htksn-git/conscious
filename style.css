@@ -93,75 +93,63 @@ a, a:hover {
 }
 
 .wordpress {
-  background-repeat: no-repeat;
-  background-position: 0 center;
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/wordpress.svg);
+  background-repeat: no-repeat;
 }
 
 .python {
-  background-repeat: no-repeat;
-  background-position: 0 center;
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/python.svg);
+  background-repeat: no-repeat;
 }
 
 .javascript {
-  background-repeat: no-repeat;
-  background-position: 0 center;
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/javascript.svg);
+  background-repeat: no-repeat;
 }
 
 .html {
-  background-repeat: no-repeat;
-  background-position: 0 center;
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/html.svg);
+  background-repeat: no-repeat;
 }
 
 .css {
-  background-repeat: no-repeat;
-  background-position: 0 center;
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/css.svg);
+  background-repeat: no-repeat;
 }
 
 .git-github {
-  background-repeat: no-repeat;
-  background-position: 0 center;
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/git-github.svg);
+  background-repeat: no-repeat;
 }
 
 .shopify {
-  background-repeat: no-repeat;
-  background-position: 0 center;
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/shopify.svg);
+  background-repeat: no-repeat;
 }
 
 .linux {
-  background-repeat: no-repeat;
-  background-position: 0 center;
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/linux.svg);
+  background-repeat: no-repeat;
 }
 
 .ruby {
-  background-repeat: no-repeat;
-  background-position: 0 center;
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/ruby.svg);
+  background-repeat: no-repeat;
 }
 
 .hugo {
-  background-repeat: no-repeat;
-  background-position: 0 center;
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/hugo.svg);
+  background-repeat: no-repeat;
 }
 
 .spread-sheets {
-  background-repeat: no-repeat;
-  background-position: 0 center;
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/spread-sheets.svg);
+  background-repeat: no-repeat;
 }
 
 .tools {
-  background-repeat: no-repeat;
-  background-position: 0 center;
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/tools.svg);
+  background-repeat: no-repeat;
 }
 
 .single-article__main h2, .page-article__main h2 {
@@ -534,6 +522,7 @@ body.scrollStop {
 }
 .page-bottom__category .category-icon {
   background-size: 36px;
+  background-position: 0 center;
   display: block;
   line-height: 46px;
   height: 46px;
@@ -547,13 +536,34 @@ body.scrollStop {
   flex-wrap: wrap;
   font-size: 13px;
   font-family: "Oswald", sans-serif;
+  font-weight: 500;
+}
+.post-meta * {
+  line-height: 1.5;
+}
+.post-meta dt, .post-meta dd {
+  margin: 2px 0;
 }
 .post-meta dt {
-  font-weight: 500;
   width: 80px;
 }
 .post-meta dd {
   width: calc(100% - 80px);
+}
+.post-meta a {
+  color: var(--link);
+}
+.post-meta__tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+.post-meta__tags li::after {
+  content: "/";
+  color: #aaa;
+  margin: 0 0.5em;
+}
+.post-meta__tags li:last-child::after {
+  content: none;
 }
 
 .sidebar {
@@ -576,6 +586,7 @@ body.scrollStop {
 }
 .sidebar .category-icon {
   background-size: 40px;
+  background-position: 0 center;
   display: block;
   line-height: 46px;
   height: 46px;
@@ -595,10 +606,14 @@ body.scrollStop {
   justify-content: right;
 }
 .single-article__header-meta {
-  background: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 20px 0 0 20px;
   padding: 40px;
   max-width: 70%;
+}
+.single-article__header .header-meta-icon {
+  background-position: right 0px bottom 0px;
+  background-size: 100px 100px;
 }
 .single-article__title {
   font-size: 24px;

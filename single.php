@@ -6,7 +6,7 @@
 <?php if(have_posts()): while(have_posts()): the_post(); ?>
 
   <header class="single-article__header" itemprop="headline">
-    <div class="single-article__header-meta">
+    <div class="single-article__header-meta header-meta-icon <?php echo get_category_slug(); ?>">
       <h1 class="single-article__title"><?php the_title(); ?></h1>
       <?php // 投稿メタ情報
       get_template_part('tmp/post-meta'); ?>

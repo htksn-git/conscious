@@ -2,12 +2,35 @@
     @include flex();
     font-size: 13px;
     font-family: 'Oswald', sans-serif;
+    font-weight: 500;
 
+    * {
+        line-height: 1.5;
+    }
+    dt, dd {
+        margin: 2px 0;
+    }
     dt {
-        font-weight: 500;
         width: 80px;
     }
     dd {
         width: calc(100% - 80px);
+    }
+    a {
+        color: var(--link);
+    }
+    &__tags {
+        @include flex();
+
+        li {
+            &::after {
+                content: '/';
+                color: #aaa;
+                margin: 0 .5em;
+            }
+            &:last-child::after {
+                content: none;
+            }
+        }
     }
 }

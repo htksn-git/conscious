@@ -3,8 +3,16 @@
 <?php if(is_single()): ?>
 <nav class="page-bottom__new-posts">
   <?php // 最新記事（同じカテゴリー）
-  $args = ['category_name' => get_category_slug(), 'posts_per_page' => 6];
-  get_template_part('tmp/new-posts', null, $args); ?>
+    $args = ['category_name' => get_category_slug(), 'posts_per_page' => 6];
+    get_template_part('tmp/new-posts', null, $args);
+  ?>
+</nav>
+
+<nav class="page-bottom__new-posts">
+  <?php // 最新記事（全記事）
+    $args = ['posts_per_page' => 6];
+    // get_template_part('tmp/new-posts', null, $args);
+  ?>
 </nav>
 <?php endif; ?>
 

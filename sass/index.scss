@@ -29,6 +29,11 @@
             &:hover {
                 box-shadow: none;
             }
+
+            .post-meta {
+                color: #aaa;
+                font-weight: normal;
+            }
         }
         &__title {
             border-bottom: 1px solid #eee;

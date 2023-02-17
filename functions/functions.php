@@ -24,4 +24,10 @@ function get_tag_name() {
   return implode(' / ', $tag_names);
 }
 
+// タグ登録の有無を確認する ////////////////////////////////////
+function count_tags() {
+  $tags = get_the_tags(); //タグ情報を取得
+  return count($tags);
+}
+
 ?>

@@ -16,7 +16,7 @@
     <dd><?php get_template_part('tmp/date'); ?></dd>
     <dt>Category</dt>
     <dd><?php echo get_category_name(); ?></dd>
-    <?php if ($tag_name != ''): ?>
+    <?php if (get_tag_name() != ''): ?>
     <dt>Tags</dt>
     <dd><?php echo get_tag_name(); ?></dd>
     <?php endif; ?>

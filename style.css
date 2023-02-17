@@ -391,6 +391,10 @@ code:not(.hljs) {
 .index-card__href:hover {
   box-shadow: none;
 }
+.index-card__href .post-meta {
+  color: #aaa;
+  font-weight: normal;
+}
 .index-card__title {
   border-bottom: 1px solid #eee;
   font-size: 18px;
@@ -505,6 +509,14 @@ body.scrollStop {
 
 .page-bottom {
   padding: 50px 0 0;
+}
+.page-bottom__new-posts {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .page-bottom__category {
   margin-left: auto;

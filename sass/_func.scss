@@ -16,10 +16,16 @@ body {
     line-height: 1.8;
 }
 img {
+    max-width: 100%;
+    height: auto;
     vertical-align: bottom;
 }
 a, a:hover {
     transition: all .3s ease;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
 }
 
 // メディアクエリ ///////////////////////////////////////////////////////////////
@@ -36,11 +42,11 @@ $breakpoints: (
 }
 
 // wrapper ///////////////////////////////////////////////////////////////
-@mixin wrap-index() {
+@mixin wrapper($width: 90%, $max-width: 1200px) {
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
-    max-width: 1200px;
+    width: $width;
+    max-width: $max-width;
 }
 
 // flex ///////////////////////////////////////////////////////////////
@@ -99,53 +105,55 @@ $breakpoints: (
     padding-left: $padding;
 }
 
-.wordpress {
-    background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/wordpress.svg);
-    background-repeat: no-repeat;
-}
-.python {
-    background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/python.svg);
-    background-repeat: no-repeat;
-}
-.javascript {
-    background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/javascript.svg);
-    background-repeat: no-repeat;
-}
-.html {
-    background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/html.svg);
-    background-repeat: no-repeat;
-}
-.css {
-    background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/css.svg);
-    background-repeat: no-repeat;
-}
-.git-github {
-    background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/git-github.svg);
-    background-repeat: no-repeat;
-}
-.shopify {
-    background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/shopify.svg);
-    background-repeat: no-repeat;
-}
-.linux {
-    background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/linux.svg);
-    background-repeat: no-repeat;
-}
-.ruby {
-    background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/ruby.svg);
-    background-repeat: no-repeat;
-}
-.hugo {
-    background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/hugo.svg);
-    background-repeat: no-repeat;
-}
-.spread-sheets {
-    background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/spread-sheets.svg);
-    background-repeat: no-repeat;
-}
-.tools {
-    background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/tools.svg);
-    background-repeat: no-repeat;
+.categories-link {
+	.wordpress {
+		background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/wordpress.svg);
+		background-repeat: no-repeat;
+	}
+	.python {
+		background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/python.svg);
+		background-repeat: no-repeat;
+	}
+	.javascript {
+		background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/javascript.svg);
+		background-repeat: no-repeat;
+	}
+	.html {
+		background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/html.svg);
+		background-repeat: no-repeat;
+	}
+	.css {
+		background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/css.svg);
+		background-repeat: no-repeat;
+	}
+	.git-github {
+		background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/git-github.svg);
+		background-repeat: no-repeat;
+	}
+	.shopify {
+		background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/shopify.svg);
+		background-repeat: no-repeat;
+	}
+	.linux {
+		background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/linux.svg);
+		background-repeat: no-repeat;
+	}
+	.ruby {
+		background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/ruby.svg);
+		background-repeat: no-repeat;
+	}
+	.hugo {
+		background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/hugo.svg);
+		background-repeat: no-repeat;
+	}
+	.spread-sheets {
+		background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/spread-sheets.svg);
+		background-repeat: no-repeat;
+	}
+	.tools {
+		background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/tools.svg);
+		background-repeat: no-repeat;
+	}
 }
 
 // button ///////////////////////////////////////////////////////////////

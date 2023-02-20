@@ -1,7 +1,7 @@
 <?php if ( !defined( 'ABSPATH' ) ) exit;
 
 // 管理画面バー非表示 ////////////////////////////////////
-add_filter('show_admin_bar', '__return_false');
+// add_filter('show_admin_bar', '__return_false');
 
 // CSS 読み込み ////////////////////////////////////
 function loading_css() {
@@ -32,5 +32,7 @@ add_action( 'wp_enqueue_scripts', 'remove_my_global_styles' );
 function remove_my_global_styles() {
 	wp_dequeue_style( 'global-styles' );
 }
+
+
 
 ?>

@@ -1,13 +1,14 @@
 <?php if ( !defined( 'ABSPATH' ) ) exit; ?>
 
 <aside class="sidebar">
-  <?php if ( is_single() ): ?>
+  <?php if ( is_single() || is_page() ): ?>
   <section class="sidebar__section">
     <h3 class="sidebar__title">TOC</h3>
     <?php echo do_shortcode('[ez-toc]'); ?>
   </section>
   <?php endif; ?>
 
+  <?php if ( ! is_page() ): ?>
   <section class="sidebar__section">
     <h3 class="sidebar__title">Tags</h3>
     <nav class="sidebar__tag">
@@ -15,6 +16,7 @@
       get_template_part('tmp/tag-cloud'); ?>
     </nav>
   </section>
+  <?php endif; ?>
 
   <section class="sidebar__section">
     <h3 class="sidebar__title">Categories</h3>

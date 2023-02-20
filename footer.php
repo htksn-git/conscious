@@ -1,17 +1,12 @@
 <?php if ( !defined( 'ABSPATH' ) ) exit; ?>
 
-<section class="page-bottom">
-  <?php // ページ下部コンテンツ
-  get_template_part('tmp/page-bottom'); ?>
-</section>
-
 <footer class="footer" itemscope itemtype="https://schema.org/WPFooter">
   <div class="footer__wrap">
     <nav class="footer__nav">
       <img class="footer__logo" src="<?php bloginfo('url'); ?>/wp-content/img/common/logo.svg" alt="conscious">
       <ul class="footer__ul">
-        <li><a href="">Twitter</a></li>
-        <li><a href="">GitHub</a></li>
+        <li><a href="https://twitter.com/htk_san">Twitter</a></li>
+        <li><a href="https://github.com/htksn-git">GitHub</a></li>
       </ul>
     </nav>
     
@@ -33,7 +28,7 @@
       get_template_part('tmp/categories-link', null, $args); ?>
     </nav>
   </div>
-  <div class="footer__copyright">&copy; <?php echo date(Y); ?> conscious</div>
+  <div class="footer__copyright">&copy; <?php echo date('Y'); ?> conscious</div>
 </footer>
 
 <?php wp_footer(); ?>

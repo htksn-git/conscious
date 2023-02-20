@@ -2,11 +2,11 @@
     padding: 50px 0 0;
 
     &__new-posts {
-        @include wrap-index();
+        @include wrapper();
         @include flex();
     }
     &__category {
-        @include wrap-index();
+        @include wrapper();
         
         .categories-link {
             @include flex();

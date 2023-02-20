@@ -2,11 +2,12 @@
 
 <?php
   $args = array(
-    'post_type' => 'post',
+    'post_type' => $args['post_type'],
     'posts_per_page' => $args['posts_per_page'],
     'category_name' => $args['category_name'],
-    'orderby' => 'date',
-    'order' => 'DESC',
+    'orderby' => $args['orderby'],
+    'order' => $args['order'],
+    'post__not_in' => $args['post__not_in'],
   );
 $the_query = new WP_Query( $args ); ?>
 

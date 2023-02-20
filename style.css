@@ -4,57 +4,103 @@
 Theme Name: conscious
 */
 
-*:where(:not(iframe, canvas, img, svg, video, input):not(svg *, symbol *)) {
+/***
+    The new CSS reset - version 1.8.4 (last updated 14.2.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
   all: unset;
   display: revert;
 }
 
-*, *::before, *::after {
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
+/* Reapply the pointer cursor for anchor tags */
 a, button {
   cursor: revert;
 }
 
+/* Remove list styles (bullets/numbers) */
 ol, ul, menu {
   list-style: none;
 }
 
+/* For images to not be able to exceed their container */
 img {
-  max-width: 100%;
+  max-inline-size: 100%;
+  max-block-size: 100%;
 }
 
+/* removes spacing between cells in tables */
 table {
   border-collapse: collapse;
 }
 
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
 textarea {
   white-space: revert;
 }
 
+/* minimum style to allow to style meter element */
 meter {
   -webkit-appearance: revert;
   appearance: revert;
 }
 
+/* preformatted text - use only for this feature */
+:where(pre) {
+  all: revert;
+}
+
+/* reset default text opacity of input placeholder */
 ::placeholder {
   color: unset;
 }
 
+/* remove default dot (•) sign */
+::marker {
+  content: initial;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
 :where([hidden]) {
   display: none;
 }
 
-:where([contenteditable]) {
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable=false])) {
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
   overflow-wrap: break-word;
   -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
 }
 
+/* apply back the draggable feature - exist only in Chromium and Safari */
 :where([draggable=true]) {
   -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+  all: revert;
 }
 
 :root {
@@ -85,6 +131,8 @@ body {
 }
 
 img {
+  max-width: 100%;
+  height: auto;
   vertical-align: bottom;
 }
 
@@ -92,64 +140,289 @@ a, a:hover {
   transition: all 0.3s ease;
 }
 
-.wordpress {
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.categories-link .wordpress {
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/wordpress.svg);
   background-repeat: no-repeat;
 }
-
-.python {
+.categories-link .python {
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/python.svg);
   background-repeat: no-repeat;
 }
-
-.javascript {
+.categories-link .javascript {
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/javascript.svg);
   background-repeat: no-repeat;
 }
-
-.html {
+.categories-link .html {
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/html.svg);
   background-repeat: no-repeat;
 }
-
-.css {
+.categories-link .css {
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/css.svg);
   background-repeat: no-repeat;
 }
-
-.git-github {
+.categories-link .git-github {
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/git-github.svg);
   background-repeat: no-repeat;
 }
-
-.shopify {
+.categories-link .shopify {
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/shopify.svg);
   background-repeat: no-repeat;
 }
-
-.linux {
+.categories-link .linux {
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/linux.svg);
   background-repeat: no-repeat;
 }
-
-.ruby {
+.categories-link .ruby {
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/ruby.svg);
   background-repeat: no-repeat;
 }
-
-.hugo {
+.categories-link .hugo {
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/hugo.svg);
   background-repeat: no-repeat;
 }
-
-.spread-sheets {
+.categories-link .spread-sheets {
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/spread-sheets.svg);
   background-repeat: no-repeat;
 }
-
-.tools {
+.categories-link .tools {
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/tools.svg);
   background-repeat: no-repeat;
+}
+
+.about {
+  width: 100%;
+}
+.about-introduce {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 60px 0;
+}
+.about-introduce__text {
+  border: 1px solid #c7c7c7;
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 1.2em;
+  position: relative;
+  width: calc(100% - 210px);
+}
+.about-introduce__text:after, .about-introduce__text:before {
+  left: 100%;
+  top: 100px;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.about-introduce__text:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-left-color: #ffffff;
+  border-width: 12px;
+  margin-top: -12px;
+}
+.about-introduce__text:before {
+  border-color: rgba(179, 179, 179, 0);
+  border-left-color: #c7c7c7;
+  border-width: 13px;
+  margin-top: -13px;
+}
+.about-introduce__img {
+  width: 180px;
+}
+.about-introduce__img img {
+  border-radius: 4px;
+  box-shadow: 6px 6px 1px #ddd;
+}
+.about-skills {
+  background: #f5f7ff;
+  padding: 50px 0;
+}
+.about-skills__headline {
+  color: #88c0e6;
+  font-family: "Oswald", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 0.7em;
+  text-align: center;
+}
+.about-skills__elements {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-skills__element {
+  display: block;
+  margin-right: 3%;
+  width: 31.3333333333%;
+  background: #f5f7ff;
+  border-radius: 10px;
+  box-shadow: 7px 7px 6px #d5d7de, -7px -7px 6px #ffffff;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+.about-skills__element:nth-child(3n) {
+  margin-right: 0;
+}
+.about-skills__title {
+  color: #c6c8d2;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 7px;
+  text-align: center;
+}
+.about-skills__items {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 500;
+}
+.about-skills__items dt, .about-skills__items dd {
+  border-top: 1px solid #ddd;
+  padding: 5px 10px;
+  width: 50%;
+}
+.about-skills__note {
+  background: #f5f7ff;
+  border-radius: 10px;
+  box-shadow: 7px 7px 6px #d5d7de, -7px -7px 6px #ffffff;
+  margin-bottom: 30px;
+  padding: 20px;
+  width: 65.66666667%;
+}
+.about-skills__note-list {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid #ddd;
+  padding: 10px 0 0 25px;
+}
+.about-skills__note-list li {
+  list-style: disc;
+  width: 25%;
+}
+.about-timeline {
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  margin-bottom: 2px;
+  padding: 50px 0;
+}
+.about-timeline__headline {
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 0.7em;
+  text-align: center;
+}
+.about-timeline__layer {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 1200px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 40px 40px;
+}
+.about-timeline__element {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.about-timeline__date {
+  color: #83a4b5;
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+  margin-top: -3px;
+  width: 100px;
+}
+.about-timeline__content {
+  border-left: 3px solid #dff4f7;
+  padding: 0 0 30px 30px;
+  position: relative;
+  width: calc(100% - 100px);
+}
+.about-timeline__content::before {
+  content: "";
+  background: #62bdce;
+  border-radius: 11px;
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  top: 0;
+  left: -7px;
+}
+.about-timeline__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: -12px;
+}
+.about-business {
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+  padding: 50px 0;
+}
+.about-business__headline {
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 0.7em;
+  text-align: center;
+}
+.about-business__layer {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 40px 40px;
+}
+.about-business__table th, .about-business__table td {
+  border-bottom: 1px solid #f6cba1;
+  font-size: 14px;
+  padding: 0.7em 1em;
+  vertical-align: middle;
+}
+.about-business__table tr:last-child th, .about-business__table tr:last-child td {
+  border: none;
+}
+.about-business__table th {
+  width: 10em;
+}
+.about-business__table td {
+  padding-left: 2em;
+  width: calc(100% - 10em);
+}
+.about-business__table a {
+  color: var(--link);
+}
+.about-business__table-list {
+  padding-left: 1.2em;
+}
+.about-business__table-list li {
+  list-style: disc;
+}
+.about-business__table-name::after {
+  content: "辻本 剛";
 }
 
 .single-article__main h2, .page-article__main h2 {
@@ -216,21 +489,27 @@ a, a:hover {
 }
 
 .breadcrumb {
-  border-bottom: 1px solid #777;
-  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 30px;
+  line-height: 30px;
+}
+.breadcrumb * {
+  color: #fff;
+  font-size: 13px;
 }
 .breadcrumb__ol {
   display: flex;
   flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 1200px;
   list-style: none;
 }
 .breadcrumb li:not(li:first-child)::before {
-  content: "/";
-  color: #aaa;
+  content: ">";
+  color: #ccc;
   margin: 0 0.3em 0 0.5em;
-}
-.breadcrumb a {
-  font-size: 14px;
 }
 
 pre {
@@ -276,7 +555,7 @@ code:not(.hljs) {
 }
 
 .footer {
-  background-image: url("http://localhost:8888/conscious/wp-content/img/common/footer.jpg");
+  background-image: url("http://localhost:8888/conscious/wp-content/img/background/footer.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
@@ -403,6 +682,18 @@ code:not(.hljs) {
   margin-bottom: 10px;
   padding-bottom: 10px;
   text-align: justify;
+}
+
+.information {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 1200px;
+  padding: 50px 0;
+}
+.information__nav {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .modal {
@@ -543,6 +834,52 @@ body.scrollStop {
   font-weight: 500;
 }
 
+.page-article__header {
+  background-image: url("http://localhost:8888/conscious/wp-content/img/single/main-visual.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 500px;
+}
+.page-article__header-in {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  height: calc(100% - 30px);
+}
+.page-article__header-meta {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px 0 0 20px;
+  padding: 40px;
+  min-width: 60%;
+  max-width: 70%;
+}
+.page-article__header .header-meta-icon {
+  background-position: right 0px bottom 0px;
+  background-size: 100px 100px;
+}
+.page-article__title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+.page-article__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.page-article__content {
+  width: 70%;
+}
+.page-article__main {
+  margin: auto;
+  padding: 30px 0;
+  width: 80%;
+  max-width: 800px;
+}
+
 .post-meta {
   display: flex;
   flex-wrap: wrap;
@@ -578,10 +915,50 @@ body.scrollStop {
   content: none;
 }
 
+.prev-next-link__ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 50px;
+  width: calc(100% - 100px);
+}
+.prev-next-link__li--prev {
+  align-self: stretch;
+  width: 50%;
+}
+.prev-next-link__li--prev a {
+  background: #f9f9f9;
+  color: var(--link);
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  height: 100%;
+  line-height: 1.6;
+  padding: 1em 2em;
+  border-right: 2px solid #fff;
+}
+.prev-next-link__li--next {
+  align-self: stretch;
+  width: 50%;
+}
+.prev-next-link__li--next a {
+  background: #f9f9f9;
+  color: var(--link);
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  height: 100%;
+  line-height: 1.6;
+  padding: 1em 2em;
+  border-left: 2px solid #fff;
+  border-radius: 0 15px 15px 0;
+  justify-content: right;
+}
 .sidebar {
   background: var(--light-blue);
   border-radius: 0 0 0 30px;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   padding: 20px;
   width: 30%;
   position: -webkit-sticky;
@@ -613,6 +990,8 @@ body.scrollStop {
   background-position: center center;
   width: 100%;
   height: 500px;
+}
+.single-article__header-in {
   display: flex;
   align-items: center;
   justify-content: right;
@@ -621,6 +1000,7 @@ body.scrollStop {
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 20px 0 0 20px;
   padding: 40px;
+  min-width: 60%;
   max-width: 70%;
 }
 .single-article__header .header-meta-icon {

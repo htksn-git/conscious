@@ -4,17 +4,19 @@
 
 <article class="index">
 
-	<?php if ( is_category() || is_tag() ): ?>
-		<header class="index-header">
-		<?php if ( is_category() ): ?>
-		<h1 class="index-header__title"><?php echo get_category_name(); ?></h1>
+	<header class="index-header">
+		<?php if ( is_home() ): ?>
+			<h1 class="index-header__title">BLOG</h1>
+		<?php elseif ( is_category() ): ?>
+			<h1 class="index-header__title"><?php echo get_category_name(); ?></h1>
 		<?php elseif ( is_tag() ): ?>
-		<h1 class="index-header__title"><?php // echo get_tag_name(); ?></h1>
+			<h1 class="index-header__title"><?php // echo get_tag_name(); ?></h1>
 		<?php endif; ?>
-		<?php the_field('acf_category_editor'); ?>
-	</header>
-	<?php endif; ?>
 
+		<?php if ( is_category() || is_tag() ): ?>
+			<?php the_field('acf_category_editor'); ?>
+		<?php endif; ?>
+	</header>
 
 	<section class="index-card">
 		<nav class="index-card__wrap">

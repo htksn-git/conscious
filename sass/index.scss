@@ -3,7 +3,7 @@
     padding: 40px 0;
     
     &-header {
-        @include wrap-index();
+        @include wrapper();
 
         &__title {
             font-size: 24px;
@@ -16,7 +16,7 @@
 
         &__wrap {
             @include flex();
-            @include wrap-index();
+            @include wrapper();
         }
         &__href {
             @include col-3();

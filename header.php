@@ -37,7 +37,7 @@
       <ul class="header__ul">
         <li><a href="<?php bloginfo('url'); ?>/">HOME</a></li>
         <li><a href="<?php bloginfo('url'); ?>/blog/">BLOG</a></li>
-        <li><a href="<?php bloginfo('url'); ?>/info/">INFO</a></li>
+        <li><a href="<?php bloginfo('url'); ?>/information/">INFO</a></li>
         <li><a href="<?php bloginfo('url'); ?>/contact/">CONTACT</a></li>
       </ul>
     </nav>

@@ -52,6 +52,20 @@ function customize_admin_bar_menu($wp_admin_bar){
     'title'  => 'プラグイン一覧', // ラベル
     'href'   => home_url('/wp-admin/plugins.php') // ページURL
   ));
+  $wp_admin_bar->add_menu(array(
+    'parent' => 'dashboard_menu', // 親メニューID
+    'id'     => 'dashboard_menu-csv-import', // 子メニューID
+    'meta'   => array(),
+    'title'  => 'CSVインポート', // ラベル
+    'href'   => home_url('/wp-admin/admin.php?import=csv') // ページURL
+  ));
+  $wp_admin_bar->add_menu(array(
+    'parent' => 'dashboard_menu', // 親メニューID
+    'id'     => 'dashboard_menu-csv-export', // 子メニューID
+    'meta'   => array(),
+    'title'  => 'CSVエクスポート', // ラベル
+    'href'   => home_url('/wp-admin/tools.php?page=wp-csv-exporter') // ページURL
+  ));
 }
 add_action('admin_bar_menu', 'customize_admin_bar_menu', 9999);
 

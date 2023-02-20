@@ -19,14 +19,13 @@
       <div class="single-article__content-wrapper">
         <?php // パンくずリスト
         get_template_part('tmp/breadcrumbs'); ?>
-        <?php the_post_thumbnail(); ?>
 
         <main class="single-article__main" itemprop="mainEntityOfPage">
           <?php add_filter('the_content', 'wpautop'); ?>
           <?php the_content(); ?>
         </main>
 
-        <?php // 参考サイト
+				<?php // 参考サイト
         get_template_part('tmp/site'); ?>
 
       </div>
@@ -37,5 +36,10 @@
 
 <?php endwhile; endif; ?>
 </article>
+
+<section class="page-bottom">
+  <?php // ページ下部コンテンツ
+  get_template_part('tmp/page-bottom'); ?>
+</section>
 
 <?php get_footer(); ?>

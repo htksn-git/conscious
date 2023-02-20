@@ -1,0 +1,221 @@
+@mixin about-headline($color: #fff) {
+    color: $color;
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: .7em;
+    text-align: center;
+}
+@mixin neumorphism() {
+    background: #f5f7ff;
+    border-radius: 10px;
+    box-shadow:  7px 7px 6px #d5d7de, -7px -7px 6px #ffffff;
+}
+@mixin about-layer() {
+    background: rgba(255, 255, 255, .7);
+    border-radius: 10px;
+}
+
+
+.about {
+    width: 100%;
+
+    &-introduce {
+        @include wrapper();
+        @include flex();
+        justify-content: space-between;
+        padding: 60px 0;
+
+        &__text {
+            border: 1px solid #c7c7c7;
+            border-radius: 10px;
+            font-size: 16px;
+            padding: 1.2em;
+            position: relative;
+            width: calc(100% - 210px);
+
+        &:after, &:before {
+            left: 100%;
+            top: 100px;
+            border: solid transparent;
+            content: "";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+        }
+        &:after {
+            border-color: rgba(255, 255, 255, 0);
+            border-left-color: #ffffff;
+            border-width: 12px;
+            margin-top: -12px;
+        }
+        &:before {
+            border-color: rgba(179, 179, 179, 0);
+            border-left-color: #c7c7c7;
+            border-width: 13px;
+            margin-top: -13px;
+        }
+        }
+        &__img {
+            width: 180px;
+
+            img {
+                border-radius: 4px;
+                box-shadow: 6px 6px 1px #ddd;
+            }
+        }
+    }
+
+    &-skills {
+        background: #f5f7ff;
+        padding: 50px 0;
+        
+        &__headline {
+            @include about-headline(#88c0e6)
+        }
+        &__elements {
+            @include wrapper($max-width: 1200px);
+            @include flex();
+        }
+        &__element {
+            @include col-3();
+            @include neumorphism();
+            margin-bottom: 30px;
+            padding: 20px;
+        }
+        &__title {
+            color: #c6c8d2;
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 7px;
+            text-align: center;
+        }
+        &__items {
+            @include flex();
+            font-weight: 500;
+
+            dt, dd {
+                border-top: 1px solid #ddd;
+                padding: 5px 10px;
+                width: 50%;
+            }
+        }
+        &__note {
+            @include neumorphism();
+            margin-bottom: 30px;
+            padding: 20px;
+            width: calc(100% - 34.33333333%);
+
+            &-list {
+                @include flex();
+                border-top: 1px solid #ddd;
+                padding: 10px 0 0 25px;
+
+                li {
+                    list-style: disc;
+                    width: 25%;
+                }
+            }
+        }
+    }
+
+    &-timeline {
+        background-color: #0093E9;
+        background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+        margin-bottom: 2px;
+        padding: 50px 0;
+        
+        &__headline {
+            @include about-headline()
+        }
+        &__layer {
+            @include wrapper($max-width: 1200px);
+            @include about-layer();
+            padding: 40px 40px;
+        }
+        &__element {
+            @include flex();
+            justify-content: space-between;
+        }
+        &__date {
+            color: #83a4b5;
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1;
+            margin-top: -3px;
+            width: 100px;
+        }
+        &__content {
+            border-left: 3px solid #dff4f7;
+			padding: 0 0 30px 30px;
+            position: relative;
+            width: calc(100% - 100px);
+
+            &::before {
+                content: '';
+                background: #62bdce;
+                border-radius: 11px;
+                width: 11px;
+                height: 11px;
+                position: absolute;
+                top: 0;
+                left: -7px;
+            }
+        }
+        &__title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: -12px;
+        }
+    }
+
+    &-business {
+        background-color: #FBAB7E;
+        background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+        padding: 50px 0;
+
+        &__headline {
+            @include about-headline()
+        }
+        &__layer {
+            @include wrapper($max-width: 700px);
+            @include about-layer();
+            padding: 40px 40px;
+        }
+        &__table {
+            th, td {
+                border-bottom: 1px solid #f6cba1;
+                font-size: 14px;
+                padding: .7em 1em;
+                vertical-align: middle;
+            }
+            tr:last-child th, tr:last-child td {
+                border: none;
+            }
+            th {
+                width: 10em;
+            }
+            td {
+                padding-left: 2em;
+                width: calc(100% - 10em);
+            }
+            a {
+                color: var(--link);
+            }
+            &-list {
+                padding-left: 1.2em;
+                
+                li {
+                    list-style: disc;
+                }
+            }
+            &-name::after {
+                content: '辻本 剛';
+            }
+        }
+    }
+}

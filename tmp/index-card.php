@@ -5,11 +5,13 @@
   <dl class="post-meta">
     <dt>Post on</dt>
     <dd><?php get_template_part('tmp/date'); ?></dd>
+		<?php if( is_single() ): ?>
     <dt>Category</dt>
     <dd><?php echo get_category_name(); ?></dd>
     <?php if (get_tag_name() != ''): ?>
     <dt>Tags</dt>
     <dd><?php echo get_tag_name(); ?></dd>
+    <?php endif; ?>
     <?php endif; ?>
   </dl>
 </a>

@@ -42,8 +42,9 @@ gulp.task("default", () => {
           .on("error", sass.logError)
         )
         // コンパイル後のcssファイル冒頭に任意の文字列を書き込む
-        .pipe(replace(/@charset "UTF-8";/g, ''))
         .pipe(header(header_content))
+        // 自動で付与される@charset指定を削除
+        .pipe(replace(/@charset "UTF-8";/g, ''))
         // 指定ディレクトリに保存
         .pipe(gulp.dest(filePath_css))
     );

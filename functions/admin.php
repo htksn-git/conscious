@@ -69,4 +69,34 @@ function customize_admin_bar_menu($wp_admin_bar){
 }
 add_action('admin_bar_menu', 'customize_admin_bar_menu', 9999);
 
+// 管理画面にページIDを表示 ////////////////////////////////////
+//投稿・固定ページ管理画面の記事一覧テーブルにIDカラムを作成
+add_filter( 'manage_posts_columns', 'customize_admin_manage_posts_columns' );//投稿
+add_filter( 'manage_pages_columns', 'customize_admin_manage_posts_columns' );//固定ページ
+function customize_admin_manage_posts_columns($columns) {
+  //投稿ID
+  $columns['post-id'] = 'ID';
+
+  return $columns;
+}
+//投稿・固定ページ管理画面の記事一覧テーブルにIDを表示
+add_action( 'manage_posts_custom_column', 'customize_admin_add_column', 10, 2 );//投稿
+add_action( 'manage_pages_custom_column', 'customize_admin_add_column', 10, 2 );//固定ページ
+function customize_admin_add_column($column_name, $post_id) {
+  //投稿ID
+  if ( 'post-id' === $column_name ) {
+    $thum = $post_id;
+  }
+  if ( isset($thum) && $thum ) {
+    echo $thum;
+  }
+}
+//投稿・固定ページ管理画面の記事一覧テーブルにIDソートを可能にする
+add_filter( 'manage_edit-post_sortable_columns', 'sort_term_columns' );//投稿
+add_filter( 'manage_edit-page_sortable_columns', 'sort_term_columns' );//固定ページ
+function sort_term_columns($columns) {
+  $columns['post-id'] = 'ID';
+  return $columns;
+}
+
 ?>

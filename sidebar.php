@@ -8,7 +8,7 @@
   </section>
   <?php endif; ?>
 
-  <?php if ( ! is_page() ): ?>
+  <?php if ( is_page('当面タグは使わない') ): ?>
   <section class="sidebar__section">
     <h3 class="sidebar__title">Tags</h3>
     <nav class="sidebar__tag">

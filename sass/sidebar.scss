@@ -13,13 +13,21 @@
         margin-bottom: 50px;
     }
     &__title {
+		color: #bfc5cb;
         font-family: 'Oswald', sans-serif;
         font-size: 24px;
-        font-weight: 500;
+		font-weight: 500;
     }
 
+	.categories-link {
+		margin-top: 10px;
+
+		&__list {
+			font-size: 0.9rem;
+		}
+	}
     .category-icon {
-        @include category-icon(40px, 46px, 50px);
+        @include category-icon(36px, 46px, 50px);
         font-weight: 500;
     }
 }

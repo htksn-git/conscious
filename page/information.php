@@ -10,6 +10,7 @@
         $args = [
           'post_type' => 'page',
           'posts_per_page' => -1,
+					'category_name' => null,
           'orderby' => 'menu_order',
           'order' => 'ASC',
           'post__not_in' => array(23, 44),

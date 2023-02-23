@@ -401,7 +401,7 @@ table {
   content: "辻本 剛";
 }
 
-.single-article__main h2, .page-article__main h2 {
+.content-article h2 {
   border-bottom: 2px solid var(--text-main);
   font-size: 1.375rem;
   font-weight: bold;
@@ -409,7 +409,7 @@ table {
   margin: 2em 0 1em;
   padding: 5px 10px;
 }
-.single-article__main h3, .page-article__main h3 {
+.content-article h3 {
   border-left: 2px solid var(--text-main);
   font-size: 1.25rem;
   font-weight: bold;
@@ -417,59 +417,59 @@ table {
   margin: 2em 0 1em;
   padding: 5px 10px;
 }
-.single-article__main h4, .page-article__main h4 {
+.content-article h4 {
   font-size: 1.25rem;
   font-weight: bold;
   line-height: 1.4;
   margin: 2em 0 1em;
 }
-.single-article__main p, .page-article__main p {
+.content-article p {
   font-size: 0.9rem;
   margin-bottom: 1em;
 }
-.single-article__main a, .page-article__main a {
+.content-article a {
   color: var(--link);
 }
-.single-article__main ul, .single-article__main ol, .page-article__main ul, .page-article__main ol {
+.content-article ul, .content-article ol {
   margin: 1rem 0;
   padding-left: 40px;
 }
-.single-article__main ul li, .page-article__main ul li {
+.content-article ul li {
   list-style: disc;
 }
-.single-article__main ul ul, .single-article__main ul ol, .page-article__main ul ul, .page-article__main ul ol {
+.content-article ul ul, .content-article ul ol {
   margin: 0;
   padding-left: 40px;
 }
-.single-article__main ol li, .page-article__main ol li {
+.content-article ol li {
   list-style: decimal;
 }
-.single-article__main ol ul, .single-article__main ol ol, .page-article__main ol ul, .page-article__main ol ol {
+.content-article ol ul, .content-article ol ol {
   margin: 0;
   padding-left: 40px;
 }
-.single-article__main li, .page-article__main li {
+.content-article li {
   font-size: 0.9rem;
   margin: 0.2em 0;
 }
-.single-article__main table, .page-article__main table {
+.content-article table {
   margin: 1.5rem 0;
 }
-.single-article__main th, .single-article__main td, .page-article__main th, .page-article__main td {
+.content-article th, .content-article td {
   border: 1px solid #ddd;
   font-size: 0.9rem;
   padding: 0.4em 0.6em;
 }
-.single-article__main th, .page-article__main th {
+.content-article th {
   background: var(--light-blue);
   font-weight: 500;
 }
-.single-article__main blockquote, .page-article__main blockquote {
+.content-article blockquote {
   background: #f5f5f5;
   margin: 1.5rem 0;
   padding: 1.1em 1.2em 0.1em 1.2em;
 }
-.single-article__main .wp-block-separator, .page-article__main .wp-block-separator {
+.content-article .wp-block-separator {
   border: none;
   background: var(--text-main);
   display: block;
@@ -542,6 +542,60 @@ code:not(.hljs) {
   font-size: 0.875em;
   font-family: monospace;
   padding: 0.125em 0.25em;
+}
+
+.content-header {
+  background-image: url("http://localhost:8888/conscious/wp-content/img/single/main-visual.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 500px;
+}
+.content-header__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  height: calc(100% - 30px);
+}
+.content-header__meta {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px 0 0 20px;
+  padding: 40px;
+  min-width: 60%;
+  max-width: 70%;
+}
+.content-header__title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+.content-header .header-meta-icon {
+  background-position: right 0px bottom 0px;
+  background-size: 100px 100px;
+}
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.content-main {
+  width: 70%;
+}
+.content-article {
+  margin: auto;
+  padding: 30px 0;
+  width: 80%;
+  max-width: 800px;
+}
+
+.wide-content-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 1200px;
+  padding: 50px 0;
 }
 
 .footer {
@@ -686,13 +740,6 @@ textarea {
   text-align: justify;
 }
 
-.information {
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-  max-width: 1200px;
-  padding: 50px 0;
-}
 .information__nav {
   display: flex;
   flex-wrap: wrap;
@@ -800,10 +847,10 @@ body.scrollStop {
   overflow: hidden;
 }
 
-.page-bottom {
+.bottom-nav {
   padding: 50px 0 0;
 }
-.page-bottom__new-posts {
+.bottom-nav__new-posts {
   margin-left: auto;
   margin-right: auto;
   width: 90%;
@@ -811,21 +858,21 @@ body.scrollStop {
   display: flex;
   flex-wrap: wrap;
 }
-.page-bottom__category {
+.bottom-nav__category {
   margin-left: auto;
   margin-right: auto;
   width: 90%;
   max-width: 1200px;
 }
-.page-bottom__category .categories-link {
+.bottom-nav__category .categories-link {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.page-bottom__category .categories-link__list {
+.bottom-nav__category .categories-link__list {
   margin: 5px 25px;
 }
-.page-bottom__category .category-icon {
+.bottom-nav__category .category-icon {
   background-size: 36px;
   background-position: 0 center;
   display: block;
@@ -836,7 +883,7 @@ body.scrollStop {
   font-weight: 500;
 }
 
-.page-article__header {
+.page-header {
   background-image: url("http://localhost:8888/conscious/wp-content/img/single/main-visual.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -844,38 +891,38 @@ body.scrollStop {
   width: 100%;
   height: 500px;
 }
-.page-article__header-in {
+.page-header__wrap {
   display: flex;
   align-items: center;
   justify-content: right;
   height: calc(100% - 30px);
 }
-.page-article__header-meta {
+.page-header__meta {
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 20px 0 0 20px;
   padding: 40px;
   min-width: 60%;
   max-width: 70%;
 }
-.page-article__header .header-meta-icon {
-  background-position: right 0px bottom 0px;
-  background-size: 100px 100px;
-}
-.page-article__title {
+.page-header__title {
   font-size: 24px;
   font-weight: bold;
   line-height: 1.3;
   margin-bottom: 10px;
 }
-.page-article__wrapper {
+.page-header .header-meta-icon {
+  background-position: right 0px bottom 0px;
+  background-size: 100px 100px;
+}
+.page-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.page-article__content {
+.page-main {
   width: 70%;
 }
-.page-article__main {
+.page-article {
   margin: auto;
   padding: 30px 0;
   width: 80%;
@@ -999,54 +1046,6 @@ body.scrollStop {
   height: 46px;
   padding-left: 50px;
   font-weight: 500;
-}
-
-.single-article__header {
-  background-image: url("http://localhost:8888/conscious/wp-content/img/single/main-visual.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  width: 100%;
-  height: 500px;
-}
-.single-article__header-in {
-  display: flex;
-  align-items: center;
-  justify-content: right;
-}
-.single-article__header-meta {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 20px 0 0 20px;
-  padding: 40px;
-  min-width: 60%;
-  max-width: 70%;
-}
-.single-article__header .header-meta-icon {
-  background-position: right 0px bottom 0px;
-  background-size: 100px 100px;
-}
-.single-article__title {
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 1.3;
-  margin-bottom: 10px;
-}
-.single-article__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.single-article__content {
-  width: 70%;
-}
-.single-article__content-wrapper {
-  margin: auto;
-  padding: 0 0 50px;
-  width: 80%;
-  max-width: 800px;
-}
-.single-article__main {
-  padding: 30px 0;
 }
 
 .article-site {

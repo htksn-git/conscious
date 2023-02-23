@@ -6,7 +6,7 @@ get_template_part('tmp/prev-next-link'); ?>
 <?php endif; ?>
 
 <?php if( is_single() ): ?>
-<nav class="page-bottom__new-posts">
+<nav class="bottom-nav__new-posts">
   <?php // 最新記事（同じカテゴリー）
     $args = [
       'post_type' => 'post',
@@ -20,7 +20,7 @@ get_template_part('tmp/prev-next-link'); ?>
   ?>
 </nav>
 
-<nav class="page-bottom__new-posts">
+<nav class="bottom-nav__new-posts">
   <?php // 最新記事（全記事）
     $args = ['posts_per_page' => 6];
     // get_template_part('tmp/new-posts', null, $args);
@@ -28,7 +28,7 @@ get_template_part('tmp/prev-next-link'); ?>
 </nav>
 <?php endif; ?>
 
-<nav class="page-bottom__category">
+<nav class="bottom-nav__category">
   <?php // カテゴリー一覧
   $args = ['pad_counts' => false];
   get_template_part('tmp/categories-link', null, $args); ?>

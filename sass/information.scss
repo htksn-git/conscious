@@ -1,7 +1,4 @@
 .information {
-    @include wrapper();
-    padding: 50px 0;
-
     &__nav {
         @include flex();
     }

@@ -22,12 +22,12 @@
     &__wrapper {
         background: #f8f7f6;
         height: 100%;
-        padding: 120px 60px 30px 40px;
+        padding: 40px 40px 30px 30px;
         position: absolute;
         overflow-y: scroll;
         top: 0;
         right: 0;
-        width: 400px;
+        width: 300px;
         max-width: 90%;
     }
     /* ボタンスタイル */
@@ -104,4 +104,43 @@
 
 body.modal__enable {
     overflow: hidden;
+}
+
+.modal-content {
+    &__title {
+		color: #bfc5cb;
+        font-family: 'Oswald', sans-serif;
+        font-size: 24px;
+		font-weight: 500;
+    }
+    .category-icon {
+        @include category-icon(36px, 42px, 50px);
+        font-weight: 500;
+    }
+	&__nav {
+		margin-top: 40px;
+	}
+	&__ul {
+		padding-left: 4px;
+
+		a {
+			font-size: 14px;
+			display: block;
+			padding-left: 30px;
+			position: relative;
+
+			&::before {
+				background: #c6c3c0;
+				content: '';
+				display: block;
+				height: 1px;
+				width: 20px;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				left: 0;
+			}
+		}
+	}
 }

@@ -31,7 +31,7 @@
     </a>
 
     <?php // 検索フォーム
-    get_template_part('tmp/search-form'); ?>
+    // get_template_part('tmp/search-form'); ?>
 
     <nav class="header__nav">
       <ul class="header__ul">

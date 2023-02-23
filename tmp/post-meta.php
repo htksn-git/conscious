@@ -1,8 +1,7 @@
 <?php if ( !defined( 'ABSPATH' ) ) exit; ?>
 
 <dl class="post-meta">
-  <dt>Post on</dt>
-  <dd><?php get_template_part('tmp/date'); ?></dd>
+	<?php get_template_part('tmp/date'); ?>
   <?php if ( ! is_page() ): ?>
   <dt>Category</dt>
   <dd><?php the_category(); ?></dd>

@@ -43,3 +43,13 @@
     </nav>
   </div>
 </header>
+
+<div class="scroll-header">
+	<div class="scroll-header__wrapper">
+		<a href="<?php bloginfo('url'); ?>/" class="scroll-header__logo-href">
+			<img class="scroll-header__logo" src="<?php bloginfo('url'); ?>/wp-content/img/common/logo.svg" alt="conscious">
+		</a>
+    <?php // 検索フォーム
+    get_template_part('tmp/search-form'); ?>
+	</div>
+</div>

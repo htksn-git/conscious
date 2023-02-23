@@ -1,12 +1,28 @@
 @mixin form-element() {
-	border: 1px solid #ccc;
-	border-radius: 6px;
+	border: 1px solid #777;
+	border-radius: 4px;
 	font-size: 1rem;
 }
 input {
 	@include form-element();
+	width: 100%;
 }
 textarea {
 	@include form-element();
+	width: 100%;
+}
 
+.search-form {
+	position: relative;
+
+	&__input {
+	}
+	&__button {
+		font-size: 12px;
+		position: absolute;
+		right: 7px;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+	}
 }

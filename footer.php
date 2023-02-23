@@ -1,5 +1,8 @@
 <?php if ( !defined( 'ABSPATH' ) ) exit; ?>
 
+<?php // コンテンツ
+get_template_part('tmp/modal'); ?>
+
 <footer class="footer" itemscope itemtype="https://schema.org/WPFooter">
   <div class="footer__wrap">
     <nav class="footer__nav">

@@ -1,0 +1,47 @@
+.scroll-header {
+	background: #fff;
+	border-bottom: 1px solid #ccc;
+	height: 50px;
+	position: fixed;
+	left: 0;
+	top: -50px;
+	transition: .5s;
+	width: 100%;
+	z-index: 99;
+
+	&__fixed {
+		top: 0;
+	}
+	&__enable {
+		.modal {
+			&__open {
+				opacity: 1;
+				transition: 1.5s;
+			}
+		}
+	}
+
+	&__wrapper {
+		@include flex();
+		justify-content: space-between;
+		width: 70%;
+	}
+	&__logo {
+		height: 25px;
+		margin: 10px 0 0 30px;
+	}
+	.search-form {
+		margin-top: 10px;
+		width: 50%;
+
+		&__input {
+			height: 30px;
+		}
+	}
+}
+
+.modal__enable {
+	.scroll-header__fixed {
+		top: -50px;
+	}
+}

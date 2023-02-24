@@ -1,3 +1,12 @@
+#ez-toc-container {
+	margin-bottom: 50px;
+	
+	&::before {
+		content: 'TOC';
+		@include sidebar-title();
+	}
+}
+
 .ez-toc {
     &-list {
         li {

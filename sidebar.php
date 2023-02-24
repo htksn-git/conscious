@@ -2,10 +2,7 @@
 
 <aside class="sidebar">
   <?php if ( is_single() || is_page() ): ?>
-  <section class="sidebar__section">
-    <h3 class="sidebar__title">TOC</h3>
-    <?php echo do_shortcode('[ez-toc]'); ?>
-  </section>
+	<?php echo do_shortcode('[ez-toc]'); ?>
   <?php endif; ?>
 
   <?php if ( is_page('当面タグは使わない') ): ?>

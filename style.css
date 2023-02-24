@@ -1186,6 +1186,17 @@ body.modal__enable {
   padding: 2px 7px;
 }
 
+#ez-toc-container {
+  margin-bottom: 50px;
+}
+#ez-toc-container::before {
+  content: "TOC";
+  color: #bfc5cb;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+
 .ez-toc-list li {
   line-height: 1.5;
 }

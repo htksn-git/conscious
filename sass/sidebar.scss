@@ -1,3 +1,10 @@
+@mixin sidebar-title() {
+	color: #bfc5cb;
+	font-family: 'Oswald', sans-serif;
+	font-size: 24px;
+	font-weight: 500;
+}
+
 .sidebar {
     background: var(--light-blue);
     border-radius: 0 0 0 30px;
@@ -13,10 +20,7 @@
         margin-bottom: 50px;
     }
     &__title {
-		color: #bfc5cb;
-        font-family: 'Oswald', sans-serif;
-        font-size: 24px;
-		font-weight: 500;
+		@include sidebar-title();
     }
 
 	.categories-link {

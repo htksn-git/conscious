@@ -1,0 +1,46 @@
+@mixin category-icon($size, $height, $padding) {
+    background-size: $size;
+    background-position: 0 center;
+	background-repeat: no-repeat;
+    display: block;
+    line-height: $height;
+    height: $height;
+    padding-left: $padding;
+}
+
+.icon-wordpress {
+	background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/wordpress.svg);
+}
+.icon-python {
+	background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/python.svg);
+}
+.icon-javascript {
+	background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/javascript.svg);
+}
+.icon-html {
+	background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/html.svg);
+}
+.icon-css {
+	background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/css.svg);
+}
+.icon-git-github {
+	background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/git-github.svg);
+}
+.icon-shopify {
+	background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/shopify.svg);
+}
+.icon-linux {
+	background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/linux.svg);
+}
+.icon-ruby {
+	background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/ruby.svg);
+}
+.icon-hugo {
+	background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/hugo.svg);
+}
+.icon-spread-sheets {
+	background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/spread-sheets.svg);
+}
+.icon-tools {
+	background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/tools.svg);
+}

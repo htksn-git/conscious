@@ -15,7 +15,7 @@
 <ul class="categories-link">
   <?php foreach( $categories as $category ) : ?>
     <li class="categories-link__list">
-      <a class="categories-link__href category-icon <?php echo $category->slug; ?>" href="<?php echo get_category_link( $category->term_id ); ?>">
+      <a class="categories-link__href category-icon icon-<?php echo $category->slug; ?>" href="<?php echo get_category_link( $category->term_id ); ?>">
         <?php if($args['pad_counts'] == true): ?>
         <?php echo $category->name; ?> (<?php echo $category->count; ?>)
         <?php else: ?>

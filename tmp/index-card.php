@@ -1,6 +1,6 @@
 <?php if ( !defined( 'ABSPATH' ) ) exit; ?>
 
-<a class="index-card__href" href="<?php the_permalink(); ?>">
+<a class="index-card__href index-card__icon icon-<?php echo get_category_slug(); ?>" href="<?php the_permalink(); ?>">
   <h3 class="index-card__title"><?php the_title(); ?></h3>
   <dl class="post-meta">
 		<?php if( is_single() || is_home() ): ?>

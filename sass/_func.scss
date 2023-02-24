@@ -96,67 +96,6 @@ $breakpoints: (
     background: linear-gradient(transparent 60%,#ff6 60%);
 }
 
-// icon ///////////////////////////////////////////////////////////////
-@mixin category-icon($size, $height, $padding) {
-    background-size: $size;
-    background-position: 0 center;
-    display: block;
-    line-height: $height;
-    height: $height;
-    padding-left: $padding;
-}
-
-.categories-link {
-	.wordpress {
-		background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/wordpress.svg);
-		background-repeat: no-repeat;
-	}
-	.python {
-		background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/python.svg);
-		background-repeat: no-repeat;
-	}
-	.javascript {
-		background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/javascript.svg);
-		background-repeat: no-repeat;
-	}
-	.html {
-		background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/html.svg);
-		background-repeat: no-repeat;
-	}
-	.css {
-		background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/css.svg);
-		background-repeat: no-repeat;
-	}
-	.git-github {
-		background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/git-github.svg);
-		background-repeat: no-repeat;
-	}
-	.shopify {
-		background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/shopify.svg);
-		background-repeat: no-repeat;
-	}
-	.linux {
-		background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/linux.svg);
-		background-repeat: no-repeat;
-	}
-	.ruby {
-		background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/ruby.svg);
-		background-repeat: no-repeat;
-	}
-	.hugo {
-		background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/hugo.svg);
-		background-repeat: no-repeat;
-	}
-	.spread-sheets {
-		background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/spread-sheets.svg);
-		background-repeat: no-repeat;
-	}
-	.tools {
-		background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/tools.svg);
-		background-repeat: no-repeat;
-	}
-}
-
 // button ///////////////////////////////////////////////////////////////
 @mixin btn($fz) {
     border-radius: 50px;

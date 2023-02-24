@@ -14,7 +14,7 @@ if(have_posts()): while(have_posts()): the_post(); ?>
 <header class="content-header" itemprop="headline">
 	<div class="content-header__wrap">
 		<?php if ( is_single() ): ?>
-		<div class="content-header__meta header-meta-icon <?php echo get_category_slug(); ?>">
+		<div class="content-header__meta icon-<?php echo get_category_slug(); ?>">
 		<?php else: ?>
 		<div class="content-header__meta">
 		<?php endif; ?>

@@ -121,53 +121,52 @@ table {
   visibility: hidden;
 }
 
-.categories-link .wordpress {
+.icon-wordpress {
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/wordpress.svg);
-  background-repeat: no-repeat;
 }
-.categories-link .python {
+
+.icon-python {
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/python.svg);
-  background-repeat: no-repeat;
 }
-.categories-link .javascript {
+
+.icon-javascript {
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/javascript.svg);
-  background-repeat: no-repeat;
 }
-.categories-link .html {
+
+.icon-html {
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/html.svg);
-  background-repeat: no-repeat;
 }
-.categories-link .css {
+
+.icon-css {
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/css.svg);
-  background-repeat: no-repeat;
 }
-.categories-link .git-github {
+
+.icon-git-github {
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/git-github.svg);
-  background-repeat: no-repeat;
 }
-.categories-link .shopify {
+
+.icon-shopify {
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/shopify.svg);
-  background-repeat: no-repeat;
 }
-.categories-link .linux {
+
+.icon-linux {
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/linux.svg);
-  background-repeat: no-repeat;
 }
-.categories-link .ruby {
+
+.icon-ruby {
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/ruby.svg);
-  background-repeat: no-repeat;
 }
-.categories-link .hugo {
+
+.icon-hugo {
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/hugo.svg);
-  background-repeat: no-repeat;
 }
-.categories-link .spread-sheets {
+
+.icon-spread-sheets {
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/spread-sheets.svg);
-  background-repeat: no-repeat;
 }
-.categories-link .tools {
+
+.icon-tools {
   background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/tools.svg);
-  background-repeat: no-repeat;
 }
 
 .about {
@@ -506,6 +505,7 @@ table {
 .bottom-nav__category .category-icon {
   background-size: 36px;
   background-position: 0 center;
+  background-repeat: no-repeat;
   display: block;
   line-height: 46px;
   height: 46px;
@@ -596,6 +596,9 @@ code:not(.hljs) {
 }
 .content-header__meta {
   background-color: rgba(255, 255, 255, 0.9);
+  background-position: right 10px bottom 5px;
+  background-repeat: no-repeat;
+  background-size: 70px;
   border-radius: 20px 0 0 20px;
   padding: 40px;
   min-width: 60%;
@@ -607,10 +610,6 @@ code:not(.hljs) {
   line-height: 1.3;
   margin-bottom: 0.5em;
 }
-.content-header .header-meta-icon {
-  background-position: right 0px bottom 0px;
-  background-size: 100px 100px;
-}
 .content-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -621,7 +620,7 @@ code:not(.hljs) {
 }
 .content-article {
   margin: auto;
-  padding: 30px 0;
+  padding: 5px 0;
   width: 80%;
   max-width: 800px;
 }
@@ -765,7 +764,10 @@ textarea {
   display: block;
   margin-right: 3%;
   width: 31.3333333333%;
-  background: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
+  background-repeat: no-repeat;
+  background-size: 40px;
+  background-position: right 5px bottom 5px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13), 0 12px 28px -12px rgba(0, 0, 0, 0.08);
   border-radius: 4px;
   margin-bottom: 30px;
@@ -899,6 +901,7 @@ body.modal__enable {
 .modal-content .category-icon {
   background-size: 36px;
   background-position: 0 center;
+  background-repeat: no-repeat;
   display: block;
   line-height: 42px;
   height: 42px;
@@ -1083,6 +1086,7 @@ body.modal__enable {
 .sidebar .category-icon {
   background-size: 36px;
   background-position: 0 center;
+  background-repeat: no-repeat;
   display: block;
   line-height: 46px;
   height: 46px;

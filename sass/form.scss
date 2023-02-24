@@ -16,13 +16,20 @@ textarea {
 	position: relative;
 
 	&__input {
+		padding: 0 2.5em 0 0.5em;
 	}
 	&__button {
+		cursor: pointer;
 		font-size: 12px;
+		line-height: 1;
 		position: absolute;
-		right: 7px;
+		right: 10px;
 		top: 0;
 		bottom: 0;
 		margin: auto;
+	}
+	&__icon {
+		opacity: 0.6;
+		width: 20px;
 	}
 }

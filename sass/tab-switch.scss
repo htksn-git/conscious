@@ -1,0 +1,45 @@
+.tab {
+    &__wrap {
+        margin: 30px auto;
+    }
+    &__btn-list {
+        @include flex();
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 30px;
+    }
+    &__btn {
+		align-self: stretch;
+        @include flex();
+		align-items: center;
+		justify-content: center;
+        background: #eee;
+		color: var(--link);
+        cursor: pointer;
+        font-family: 'Oswald', sans-serif;
+		font-size: 16px;
+		line-height: 1.4;
+        padding: 8px 0;
+        text-align: center;
+        transition: all 0.2s ease 0s;
+        width: 180px;
+
+        &.active {
+            background: #777;
+			color: #fff;
+        }
+		&:first-child {
+			border-radius: 8px 0 0 8px;
+		}
+		&:last-child {
+			border-radius: 0 8px 8px 0;
+		}
+    }
+    &__content {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}

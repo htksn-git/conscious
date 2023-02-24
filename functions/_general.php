@@ -20,6 +20,8 @@ function load_js() {
 		, array( 'jquery' ), '', true);
   wp_enqueue_script('scroll-header', get_template_directory_uri().'/js/scroll-header.js'
 		, array( 'jquery' ), '', true);
+  wp_enqueue_script('tab-switch', get_template_directory_uri().'/js/tab-switch.js'
+		, array( 'jquery' ), '', true);
 }
 add_action('wp_enqueue_scripts', 'load_js');
 

@@ -10,14 +10,14 @@
 <?php else: ?>
 	<dt>Posted</dt>
   <dd>
-		<time class="post-date__published" itemprop="dateModified" datetime="<?php echo get_the_modified_date('Y-m-d') ?>">
-			<?php the_modified_date('Y/m/d'); ?>
-		</time>
-	</dd>
-	<dt>Updated</dt>
-  <dd>
 		<span class="post-date__updated" itemprop="datePublished" content="<?php echo get_the_time('Y-m-d') ?>">
 			<?php the_time('Y/m/d'); ?>
 		</span>
+	</dd>
+	<dt>Updated</dt>
+  <dd>
+		<time class="post-date__published" itemprop="dateModified" datetime="<?php echo get_the_modified_date('Y-m-d') ?>">
+			<?php the_modified_date('Y/m/d'); ?>
+		</time>
 	</dd>
 <?php endif; ?>

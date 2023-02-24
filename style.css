@@ -787,7 +787,6 @@ textarea {
   line-height: 1.5;
   margin-bottom: 10px;
   padding-bottom: 10px;
-  text-align: justify;
 }
 
 .information__nav {
@@ -941,7 +940,6 @@ body.modal__enable {
   line-height: 1.5;
 }
 .post-meta dt, .post-meta dd {
-  line-height: 1;
   margin: 2px 0;
 }
 .post-meta dt {

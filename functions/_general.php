@@ -1,4 +1,5 @@
-<?php if ( !defined( 'ABSPATH' ) ) exit;
+<?php if ( !defined( 'ABSPATH' ) ) exit; ?>
+<?php
 
 // 管理画面バー非表示 ////////////////////////////////////
 add_filter('show_admin_bar', '__return_false');
@@ -31,6 +32,9 @@ add_action('wp_enqueue_scripts', 'load_js');
 // ビジュアルエディタースタイルを適用 ////////////////////////////////////
 // add_editor_style();
 
+// 固定ページで抜粋を有効化 ////////////////////////////////////
+add_post_type_support( 'page', 'excerpt' );
+
 // WPが生成するサイトマップを無効化 ////////////////////////////////////
 add_filter( 'wp_sitemaps_enabled', '__return_false' );
 
@@ -40,7 +44,5 @@ add_action( 'wp_enqueue_scripts', 'remove_my_global_styles' );
 function remove_my_global_styles() {
 	wp_dequeue_style( 'global-styles' );
 }
-
-
 
 ?>

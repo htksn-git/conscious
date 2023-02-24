@@ -2,7 +2,11 @@
 
 <!DOCTYPE HTML>
 <html lang="ja">
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<?php if( is_front_page() ): ?>
+<head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# website: https://ogp.me/ns/website#">
+<?php else: ?>
+<head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# article: https://ogp.me/ns/article#">
+<?php endif; ?>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -11,12 +15,23 @@
 <meta name="robots" content="max-image-preview:large" />
 <!-- title / description  -->
 <title><?php wp_title(' - ',true,'right'); ?><?php bloginfo('name'); ?></title>
-<meta name="description" content="ここにmeta descriptionが入ります" />
+<meta name="description" content="<?php echo get_description(); ?>" />
 <!-- canonical -->
-<link rel="canonical" href="https://example.com/">
+<link rel="canonical" href="<?php the_permalink(); ?>">
 <link rel="alternate" hreflang="ja" href="<?php echo("https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]); ?>">
 <!-- OGP -->
-<?php if(!is_user_logged_in()): // アナリティクス ?>
+<meta property="og:title" content="<?php the_title(); ?>">
+<meta property="og:description" content="<?php echo get_description(); ?>">
+<meta property="og:url" content="<?php the_permalink(); ?>">
+<meta property="og:image" content="<?php bloginfo('url'); ?>/wp-content/img/common/thumbnail.png">
+<?php if( is_front_page() ): ?>
+<meta property="og:type" content="website">
+<?php else: ?>
+<meta property="og:type" content="article">
+<?php endif; ?>
+<meta property="og:site_name" content="<?php bloginfo('name'); ?>">
+<!-- // -->
+<?php if( ! is_user_logged_in() ): // アナリティクス ?>
 <?php endif; ?>
 <?php get_template_part('tmp/include-head'); // head追加読み込み ?>
 <?php wp_head(); ?>

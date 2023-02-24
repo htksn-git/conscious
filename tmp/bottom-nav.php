@@ -1,6 +1,11 @@
 <?php if ( !defined( 'ABSPATH' ) ) exit; ?>
 
 <?php if( is_single() ): ?>
+<?php // SNSシェアボタン
+get_template_part('tmp/sns-share'); ?>
+<?php endif; ?>
+
+<?php if( is_single() ): ?>
 <?php // 前後の記事へのリンク
 get_template_part('tmp/prev-next-link'); ?>
 <?php endif; ?>

@@ -1,4 +1,5 @@
-<?php if ( !defined( 'ABSPATH' ) ) exit;
+<?php if ( !defined( 'ABSPATH' ) ) exit; ?>
+<?php
 
 // サイト内検索を「投稿」に限定 ////////////////////////////////////
 function SearchFilter($query) {

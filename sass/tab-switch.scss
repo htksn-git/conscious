@@ -13,7 +13,8 @@
         @include flex();
 		align-items: center;
 		justify-content: center;
-        background: #eee;
+        background: #fff;
+		border: 1px solid #666;
 		color: var(--link);
         cursor: pointer;
         font-family: 'Oswald', sans-serif;
@@ -25,7 +26,7 @@
         width: 180px;
 
         &.active {
-            background: #777;
+            background: #666;
 			color: #fff;
         }
 		&:first-child {

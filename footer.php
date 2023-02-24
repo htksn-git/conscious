@@ -19,7 +19,7 @@ get_template_part('tmp/modal'); ?>
         <li><a href="<?php bloginfo('url'); ?>/about/">ABOUT</a></li>
         <li><a href="<?php bloginfo('url'); ?>/info/">INFO</a></li>
         <li><a href="<?php bloginfo('url'); ?>/sitemap/">SITEMAP</a></li>
-        <li><a href="<?php bloginfo('url'); ?>/privacy-pollicy/">PRIVACY POLICY</a></li>
+        <li><a href="<?php bloginfo('url'); ?>/privacy-policy/">PRIVACY POLICY</a></li>
         <li><a href="<?php bloginfo('url'); ?>/contact/">CONTACT</a></li>
       </ul>
     </nav>

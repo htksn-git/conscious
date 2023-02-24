@@ -1,0 +1,19 @@
+.sns-share {
+	@include flex();
+	justify-content: center;
+	margin: 0 0 50px 0;
+
+	&__li {
+		margin: 0 7px;
+	}
+	&__href {
+		background: #f5f7fd;
+		border-radius: 50px;
+		display: block;
+		padding: 7px;
+	}
+	&__img {
+		opacity: 0.9;
+		width: 30px;
+	}
+}

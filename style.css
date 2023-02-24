@@ -1140,6 +1140,26 @@ body.modal__enable {
   color: #555;
 }
 
+.sns-share {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 0 50px 0;
+}
+.sns-share__li {
+  margin: 0 7px;
+}
+.sns-share__href {
+  background: #f5f7fd;
+  border-radius: 50px;
+  display: block;
+  padding: 7px;
+}
+.sns-share__img {
+  opacity: 0.9;
+  width: 30px;
+}
+
 .tab__wrap {
   margin: 30px auto;
 }
@@ -1156,7 +1176,8 @@ body.modal__enable {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  background: #eee;
+  background: #fff;
+  border: 1px solid #666;
   color: var(--link);
   cursor: pointer;
   font-family: "Oswald", sans-serif;
@@ -1168,7 +1189,7 @@ body.modal__enable {
   width: 180px;
 }
 .tab__btn.active {
-  background: #777;
+  background: #666;
   color: #fff;
 }
 .tab__btn:first-child {

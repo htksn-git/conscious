@@ -1,7 +1,9 @@
-<?php if ( !defined( 'ABSPATH' ) ) exit;
+<?php if ( !defined( 'ABSPATH' ) ) exit; ?>
+<?php
 
 // カテゴリー名 取得（リンクなし） ////////////////////////////////////
 function get_category_name() {
+	global $post;
   $cat = get_the_category();
   $cat = $cat[0];
   return $cat->name;
@@ -9,6 +11,7 @@ function get_category_name() {
 
 // カテゴリースラッグ 取得（リンクなし） ////////////////////////////////////
 function get_category_slug() {
+	global $post;
   $cat = get_the_category();
   $cat = $cat[0];
   return $cat->slug;
@@ -16,6 +19,7 @@ function get_category_slug() {
 
 // タグ名 取得（リンクなし） ////////////////////////////////////
 function get_tag_name() {
+	global $post;
 	if( has_tag() ) {
 		$post_tags = get_the_tags();
 		$tag_names = array();
@@ -25,6 +29,5 @@ function get_tag_name() {
 		return implode(' / ', $tag_names);
 	}
 }
-
 
 ?>

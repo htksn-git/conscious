@@ -1,4 +1,5 @@
-<?php if ( !defined( 'ABSPATH' ) ) exit;
+<?php if ( !defined( 'ABSPATH' ) ) exit; ?>
+<?php
 
 // ツールバーで不要な項目を消去する ////////////////////////////////////
 function update_adminbar($wp_adminbar) {

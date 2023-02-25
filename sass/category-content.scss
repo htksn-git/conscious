@@ -1,0 +1,48 @@
+.category-content {
+	background: #fff;
+	padding: 30px;
+	
+	&__wrapper {
+		@include flex();
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__title {
+		@include index-title();
+		margin-bottom: 20px;
+	}
+	&__icon {
+		width: 120px;
+	}
+	&__main {
+		width: calc(100% - 150px);
+	}
+	&__description {
+		font-size: 0.9rem;
+	}
+	&__reference {
+		margin-top: 15px;
+
+		&-title {
+			background: #eee;
+			font-family: 'Oswald', sans-serif;
+			font-size: 14px;
+			font-weight: 400;
+			padding: 3px 10px;
+		}
+		&-ul {
+			list-style: disc;
+			margin-top: 7px;
+			padding-left: 20px;
+		}
+		li {
+			color: #ccc;
+			font-size: 0.9rem;
+			line-height: 1.5;
+			margin-bottom: 3px;
+		}
+		a {
+			color: var(--link);
+		}
+	}
+}

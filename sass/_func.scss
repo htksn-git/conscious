@@ -76,7 +76,7 @@ $breakpoints: (
     }
 }
 
-// ヘッダー ///////////////////////////////////////////////////////////////
+// ページヘッダー ///////////////////////////////////////////////////////////////
 @mixin header-background($img, $pos1, $pos2, $height) {
     background-image: url($img);
     background-repeat: no-repeat;
@@ -84,6 +84,13 @@ $breakpoints: (
     background-position: $pos1 $pos2;
     width: 100%;
     height: $height;
+}
+
+// インデックスページ ///////////////////////////////////////////////////////////////
+@mixin index-title() {
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
 }
 
 // 装飾 ///////////////////////////////////////////////////////////////

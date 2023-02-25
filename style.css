@@ -122,51 +122,51 @@ table {
 }
 
 .icon-wordpress {
-  background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/wordpress.svg);
+  background-image: url(http://localhost:8888/conscious/wp-content/img/icon-category/wordpress.svg);
 }
 
 .icon-python {
-  background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/python.svg);
+  background-image: url(http://localhost:8888/conscious/wp-content/img/icon-category/python.svg);
 }
 
 .icon-javascript {
-  background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/javascript.svg);
+  background-image: url(http://localhost:8888/conscious/wp-content/img/icon-category/javascript.svg);
 }
 
 .icon-html {
-  background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/html.svg);
+  background-image: url(http://localhost:8888/conscious/wp-content/img/icon-category/html.svg);
 }
 
 .icon-css {
-  background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/css.svg);
+  background-image: url(http://localhost:8888/conscious/wp-content/img/icon-category/css.svg);
 }
 
 .icon-git-github {
-  background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/git-github.svg);
+  background-image: url(http://localhost:8888/conscious/wp-content/img/icon-category/git-github.svg);
 }
 
 .icon-shopify {
-  background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/shopify.svg);
+  background-image: url(http://localhost:8888/conscious/wp-content/img/icon-category/shopify.svg);
 }
 
 .icon-linux {
-  background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/linux.svg);
+  background-image: url(http://localhost:8888/conscious/wp-content/img/icon-category/linux.svg);
 }
 
 .icon-ruby {
-  background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/ruby.svg);
+  background-image: url(http://localhost:8888/conscious/wp-content/img/icon-category/ruby.svg);
 }
 
 .icon-hugo {
-  background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/hugo.svg);
+  background-image: url(http://localhost:8888/conscious/wp-content/img/icon-category/hugo.svg);
 }
 
 .icon-spread-sheets {
-  background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/spread-sheets.svg);
+  background-image: url(http://localhost:8888/conscious/wp-content/img/icon-category/spread-sheets.svg);
 }
 
 .icon-tools {
-  background-image: url(http://localhost:8888/conscious/wp-content/img/icon-brand/tools.svg);
+  background-image: url(http://localhost:8888/conscious/wp-content/img/icon-category/tools.svg);
 }
 
 .about {
@@ -541,6 +541,56 @@ table {
   margin: 0 0.3em 0 0.5em;
 }
 
+.category-content {
+  background: #fff;
+  padding: 30px;
+}
+.category-content__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.category-content__title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.category-content__icon {
+  width: 120px;
+}
+.category-content__main {
+  width: calc(100% - 150px);
+}
+.category-content__description {
+  font-size: 0.9rem;
+}
+.category-content__reference {
+  margin-top: 15px;
+}
+.category-content__reference-title {
+  background: #eee;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 3px 10px;
+}
+.category-content__reference-ul {
+  list-style: disc;
+  margin-top: 7px;
+  padding-left: 20px;
+}
+.category-content__reference li {
+  color: #ccc;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 3px;
+}
+.category-content__reference a {
+  color: var(--link);
+}
+
 pre {
   margin: 1.5rem 0;
   position: relative;
@@ -747,7 +797,7 @@ textarea {
 }
 
 .index {
-  background: #eee;
+  background: #f5f4f3;
   padding: 40px 0;
 }
 .index-header {
@@ -776,11 +826,11 @@ textarea {
   display: block;
   margin-right: 3%;
   width: 31.3333333333%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #fff;
   background-repeat: no-repeat;
   background-size: 40px;
   background-position: right 5px bottom 5px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13), 0 12px 28px -12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.09), 0 12px 18px -12px rgba(0, 0, 0, 0.08);
   border-radius: 4px;
   margin-bottom: 30px;
   padding: 20px;

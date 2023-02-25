@@ -38,10 +38,18 @@
         width: 80%;
         max-width: 800px;
     }
-}
-.wide-content {
-	&-wrapper {
-		@include wrapper();
-		padding: 50px 0;
+	// 1カラムページ
+	&-wide {
+		&-wrapper {
+			&-information {
+				@include wrapper();
+			}
+		}
+		&.content {
+			&-information {
+				background: var(--light-blue);
+				padding: 80px 0 55px;
+			}
+		}
 	}
 }

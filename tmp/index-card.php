@@ -15,6 +15,11 @@
 				<dd><?php echo get_tag_name(); ?></dd>
 			<?php endif; ?>
     <?php endif; ?>
+		<?php if( ! is_page() ): ?>
 		<?php get_template_part('tmp/date'); ?>
+    <?php endif; ?>
+		<?php if( is_page() ): ?>
+		<?php echo gen_page_excerpts(); ?>
+    <?php endif; ?>
   </dl>
 </a>

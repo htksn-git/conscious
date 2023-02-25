@@ -1,6 +1,8 @@
 .category-content {
 	background: #fff;
-	padding: 30px;
+	outline: 1px solid #dfdede;
+	outline-offset: -5px;
+	padding: 30px 40px 30px 30px;
 	
 	&__wrapper {
 		@include flex();
@@ -19,12 +21,13 @@
 	}
 	&__description {
 		font-size: 0.9rem;
+		text-align: justify;
 	}
 	&__reference {
 		margin-top: 15px;
 
 		&-title {
-			background: #eee;
+			background: #f6f4f2;
 			font-family: 'Oswald', sans-serif;
 			font-size: 14px;
 			font-weight: 400;

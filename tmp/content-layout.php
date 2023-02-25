@@ -29,13 +29,15 @@ if(have_posts()): while(have_posts()): the_post(); ?>
 
 <?php // サイドバー表示切り替え
 if ( is_page($no_sidebar) || is_front_page() ): ?>
-<div class="wide-content-wrapper">
-	<main class="wide-content-main">
-		<article class="wide-content-article" itemscope="itemscope" itemprop="blogPost" itemtype="https://schema.org/BlogPosting">
-			<?php // コンテンツ
-			get_template_part('tmp/content'); ?>
-		</article>
-	</main>
+<div class="content-wide content-<?php echo get_page_slug(); ?>">
+	<div class="content-wide-wrapper-<?php echo get_page_slug(); ?>">
+		<main class="content-wide-main">
+			<article class="content-wide-article" itemscope="itemscope" itemprop="blogPost" itemtype="https://schema.org/BlogPosting">
+				<?php // コンテンツ
+				get_template_part('tmp/content'); ?>
+			</article>
+		</main>
+	</div>
 </div>
 
 <?php else: ?>

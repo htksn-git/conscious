@@ -26,14 +26,23 @@
             border-radius: 4px;
             margin-bottom: 30px;
             padding: 20px;
+			outline: 1px solid #fff;
 
             &:hover {
                 box-shadow: none;
+				outline: 1px solid #dfdede;
             }
+			&:not(.index-card__icon) {
+				background-image: url(http://localhost:8888/conscious/wp-content/img/common/arrow-right_bottom.svg);
+				background-size: 14px;
+			}
 
             .post-meta {
                 color: #999;
             }
+        }
+        &__excerpt {
+			font-size: 0.8rem;
         }
         &__title {
             border-bottom: 1px solid #eee;

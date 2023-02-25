@@ -12,7 +12,7 @@
 				'category_name' => null,
 				'orderby' => 'menu_order',
 				'order' => 'ASC',
-				'post__not_in' => array(16, 7),
+				'post__not_in' => array(16, 7, 17),
 			];
 			get_template_part('tmp/wp-query', null, $args);
 		?>

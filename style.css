@@ -543,7 +543,9 @@ table {
 
 .category-content {
   background: #fff;
-  padding: 30px;
+  outline: 1px solid #dfdede;
+  outline-offset: -5px;
+  padding: 30px 40px 30px 30px;
 }
 .category-content__wrapper {
   display: flex;
@@ -565,12 +567,13 @@ table {
 }
 .category-content__description {
   font-size: 0.9rem;
+  text-align: justify;
 }
 .category-content__reference {
   margin-top: 15px;
 }
 .category-content__reference-title {
-  background: #eee;
+  background: #f6f4f2;
   font-family: "Oswald", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -677,13 +680,15 @@ code:not(.hljs) {
   width: 80%;
   max-width: 800px;
 }
-
-.wide-content-wrapper {
+.content-wide-wrapper-information {
   margin-left: auto;
   margin-right: auto;
   width: 90%;
   max-width: 1200px;
-  padding: 50px 0;
+}
+.content-wide.content-information {
+  background: var(--light-blue);
+  padding: 80px 0 55px;
 }
 
 .footer {
@@ -834,15 +839,24 @@ textarea {
   border-radius: 4px;
   margin-bottom: 30px;
   padding: 20px;
+  outline: 1px solid #fff;
 }
 .index-card__href:nth-child(3n) {
   margin-right: 0;
 }
 .index-card__href:hover {
   box-shadow: none;
+  outline: 1px solid #dfdede;
+}
+.index-card__href:not(.index-card__icon) {
+  background-image: url(http://localhost:8888/conscious/wp-content/img/common/arrow-right_bottom.svg);
+  background-size: 14px;
 }
 .index-card__href .post-meta {
   color: #999;
+}
+.index-card__excerpt {
+  font-size: 0.8rem;
 }
 .index-card__title {
   border-bottom: 1px solid #eee;

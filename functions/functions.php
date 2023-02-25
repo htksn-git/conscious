@@ -1,6 +1,13 @@
 <?php if ( !defined( 'ABSPATH' ) ) exit; ?>
 <?php
 
+// ページスラッグ 取得 ////////////////////////////////////
+function get_page_slug() {
+	global $post;
+  $slug = $post->post_name;
+	return $slug;
+}
+
 // カテゴリー名 取得（リンクなし） ////////////////////////////////////
 function get_category_name() {
 	global $post;

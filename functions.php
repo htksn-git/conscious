@@ -8,5 +8,6 @@ locate_template('functions/admin.php', true);
 locate_template('functions/page.php', true);
 locate_template('functions/search.php', true);
 locate_template('functions/plugin.php', true);
+locate_template('functions/page-excerpt.php', true);
 
 ?>

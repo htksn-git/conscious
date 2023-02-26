@@ -27,18 +27,171 @@
 			font-weight: 500;
 		}
 		&__btn {
-			@include btn();
+			@include btn-bg();
 			margin: 1.5em auto 0;
 		}
 	}
 
 	&-services {
-		&__wrapper {
-			@include wrapper();
+		background: #f5f4f3;
+		padding: 60px 0;
+
+		&__main-title {
+			font-size: fz(32);
+			font-weight: bold;
+			margin: 10px 0 60px;
+			text-align: center;
+
+			&-en {
+				color: #CECBC0;
+				font-family: 'Oswald', sans-serif;
+				font-size: fz(24);
+				font-weight: bold;
+				text-align: center;
+				position: relative;
+
+				&::after {
+					content: '';
+					background: #CECBC0;
+					display: block;
+					width: 50px;
+					height: 2px;
+					position: absolute;
+					margin: 5px auto 0;
+					left: 0;
+					right: 0;
+				}
+			}
 		}
-		&__card {
+		@mixin services-section() {
+			position: relative;
+		}
+		@mixin services-section-arrow($c) {
+			content: '';
+			display: block;
+			border-top: 50px solid $c;
+			border-left: 50px solid $c;
+			border-right: 50px solid transparent;
+			border-bottom: 50px solid transparent;
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		&__section {
+			&--red {
+				@include services-section();
+				&::before {
+					@include services-section-arrow(#F9805C);
+				}
+			}
+			&--yellow {
+				@include services-section();
+				&::before {
+					@include services-section-arrow(#F6C13D);
+				}
+			}
+			&--green {
+				@include services-section();
+				&::before {
+					@include services-section-arrow(#63B49B);
+				}
+			}
+		}
+		&__main {
+			background: #fff;
+			border-radius: 0 40px 40px 0;
+			margin-bottom: 60px;
+			padding: 60px 120px 60px 60px;
+			width: calc(100% - 300px);
+		}
+		&__title {
+			font-size: fz(22);
+			font-weight: bold;
+			margin-bottom: 30px;
 		}
 		&__text {
+			margin-bottom: 1em;
+			text-align: justify;
+		}
+		@mixin services-aside($bg) {
+			background: $bg;
+			border-radius: 8px;
+			padding: 20px;
+			width: 300px;
+			position: absolute;
+			top: 60px;
+			right: 60px;
+		}
+		@mixin services-aside-text($color) {
+			color: $color;
+			font-size: fz(15);
+			font-weight: 500;
+			line-height: 1.6;
+			text-align: justify;
+		}
+		&__aside {
+			&--red {
+				@include services-aside(#F9805C);
+			}
+			&--yellow {
+				@include services-aside(#F6C13D);
+			}
+			&--green {
+				@include services-aside(#63B49B);
+			}
+			&-img {
+				margin-bottom: 10px;
+			}
+			&-text {
+				&--black {
+					@include services-aside-text(var(--text-main))
+				}
+				&--white {
+					@include services-aside-text(#fff)
+				}
+			}
+		}
+		&__btn {
+			@include btn-bd($fz: 17);
+			margin: 25px auto 0;
+		}
+		&__calc-date {
+			@include flex();
+			margin: 1em auto;
+			width: 90%;
+
+			&-title {
+				width: 10em;
+			}
+			&-detail {
+				@include flex();
+				align-items: center;
+				width: calc(100% - 12em);
+			}
+			&-day {
+				text-align: center;
+				width: 4em;
+			}
+			&-month {
+				text-align: center;
+				width: 4em;
+			}
+			&-total {
+				@include marker();
+				font-weight: bold;
+				text-align: center;
+				width: 4em;
+			}
+		}
+		&__calc-icon {
+			&-cross {
+				margin: 0 10px;
+			}
+			&-equal {
+				margin: 0 10px;
+			}
 		}
 	}
 }

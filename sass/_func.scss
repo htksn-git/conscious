@@ -44,7 +44,7 @@ $breakpoints: (
 
 // font size ///////////////////////////////////////////////////////////////
 @function fz($font-size) {
-	@return ($font-size / 16) * 1rem;
+	@return calc($font-size / 16) * 1rem;
 }
 
 // wrapper ///////////////////////////////////////////////////////////////
@@ -112,23 +112,41 @@ $breakpoints: (
 }
 
 // button ///////////////////////////////////////////////////////////////
-@mixin btn(
-		$bg1: #0093E9,
-		$bg2: linear-gradient(301deg, #0093E9 0%, #80D0C7 100%),
-		$fz: 18,
-		$w: 280px
-	) {
-	background-color: $bg1;
-	background-image: $bg2;
+@mixin btn() {
     border-radius: 50px;
-	color: #fff;
 	display: block;
-    font-size: fz($fz);
     font-weight: 500;
     letter-spacing: 0.04em;
 	line-height: 1.5;
 	padding: 8px 0;
     text-align: center;
     text-decoration: none;
+}
+@mixin btn-bg(
+		$bg1: #0093E9,
+		$bg2: linear-gradient(301deg, #0093E9 0%, #80D0C7 100%),
+		$fz: 18,
+		$w: 280px,
+	) {
+	@include btn();
+	background-color: $bg1;
+	background-image: $bg2;
+	color: #fff;
+    font-size: fz($fz);
+	width: $w;
+}
+@mixin btn-bd(
+		$bdc: var(--link),
+		$color: var(--link),
+		$fz: 18,
+		$w: 280px,
+	) {
+	@include btn();
+	background: #fff;
+	border-color: $bdc;
+	border-style: solid;
+	border-width: 3px;
+	color: $color;
+    font-size: fz($fz);
 	width: $w;
 }

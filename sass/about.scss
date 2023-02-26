@@ -1,10 +1,15 @@
+@mixin about-radius-section() {
+	border-radius: 70px 70px 0 0;
+	margin-top: -70px;
+	padding: 50px 0 110px;
+}
 @mixin about-headline($color: #fff) {
     color: $color;
     font-family: 'Oswald', sans-serif;
-    font-size: 28px;
+    font-size: fz(28);
     font-weight: bold;
     line-height: 1;
-    margin-bottom: .7em;
+    margin-bottom: 1em;
     text-align: center;
 }
 @mixin neumorphism() {
@@ -22,55 +27,44 @@
     width: 100%;
 
     &-introduce {
-        @include wrapper();
+        @include wrapper($width: 80%, $max-width: 1100px);
         @include flex();
         justify-content: space-between;
-        padding: 60px 0;
+        padding: 60px 0 130px;
 
         &__text {
-            border: 1px solid #c7c7c7;
-            border-radius: 10px;
-            font-size: 16px;
-            padding: 1.2em;
-            position: relative;
-            width: calc(100% - 210px);
-
-        &:after, &:before {
-            left: 100%;
-            top: 100px;
-            border: solid transparent;
-            content: "";
-            height: 0;
-            width: 0;
-            position: absolute;
-            pointer-events: none;
-        }
-        &:after {
-            border-color: rgba(255, 255, 255, 0);
-            border-left-color: #ffffff;
-            border-width: 12px;
-            margin-top: -12px;
-        }
-        &:before {
-            border-color: rgba(179, 179, 179, 0);
-            border-left-color: #c7c7c7;
-            border-width: 13px;
-            margin-top: -13px;
-        }
+            font-size: fz(16);
+			text-align: justify;
+            width: calc(100% - 230px);
         }
         &__img {
+			height: 180px;
             width: 180px;
+			position: relative;
 
             img {
-                border-radius: 4px;
-                box-shadow: 6px 6px 1px #ddd;
+                border-radius: 15px;
+				margin-top: 6px;
             }
+			&::after {
+				content: '';
+				background: #ffdf81;
+				border-radius: 15px;
+				display: block;
+				height: 180px;
+				width: 180px;
+				position: absolute;
+				top: 5px;
+				left: 12px;
+				transform: rotate(10deg);
+				z-index: -1;
+			}
         }
     }
 
     &-skills {
+		@include about-radius-section();
         background: #f5f7ff;
-        padding: 50px 0;
         
         &__headline {
             @include about-headline(#88c0e6)
@@ -88,7 +82,7 @@
         &__title {
             color: #c6c8d2;
             font-family: 'Oswald', sans-serif;
-            font-size: 20px;
+            font-size: fz(20);
             font-weight: bold;
             margin-bottom: 7px;
             text-align: center;
@@ -123,18 +117,18 @@
     }
 
     &-timeline {
+		@include about-radius-section();
         background-color: #0093E9;
         background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-        margin-bottom: 2px;
-        padding: 50px 0;
         
         &__headline {
             @include about-headline()
         }
         &__layer {
-            @include wrapper($max-width: 1200px);
+            @include wrapper();
             @include about-layer();
-            padding: 40px 40px;
+			margin-bottom: 30px;
+            padding: 60px 50px 60px 40px;
         }
         &__element {
             @include flex();
@@ -143,7 +137,7 @@
         &__date {
             color: #83a4b5;
             font-family: 'Oswald', sans-serif;
-            font-size: 18px;
+            font-size: fz(18);
             font-weight: bold;
             line-height: 1;
             margin-top: -3px;
@@ -167,16 +161,18 @@
             }
         }
         &__title {
-            font-size: 18px;
+			color: #0c4a6a;
+            font-size: fz(18);
             font-weight: bold;
             margin-top: -12px;
         }
     }
 
-    &-business {
+    &-information {
+		@include about-radius-section();
         background-color: #FBAB7E;
         background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
-        padding: 50px 0;
+        background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
 
         &__headline {
             @include about-headline()
@@ -184,12 +180,12 @@
         &__layer {
             @include wrapper($max-width: 700px);
             @include about-layer();
-            padding: 40px 40px;
+            padding: 30px 40px;
         }
         &__table {
             th, td {
-                border-bottom: 1px solid #f6cba1;
-                font-size: 14px;
+                border-bottom: 1px solid #abcad8;
+                font-size: fz(16);
                 padding: .7em 1em;
                 vertical-align: middle;
             }
@@ -205,6 +201,7 @@
             }
             a {
                 color: var(--link);
+				font-weight: 500;
             }
             &-list {
                 padding-left: 1.2em;

@@ -50,10 +50,10 @@
 
     <nav class="header__nav">
       <ul class="header__ul">
-        <li><a href="<?php bloginfo('url'); ?>/">HOME</a></li>
-        <li><a href="<?php bloginfo('url'); ?>/blog/">BLOG</a></li>
-        <li><a href="<?php bloginfo('url'); ?>/information/">INFO</a></li>
-        <li><a href="<?php bloginfo('url'); ?>/contact/">CONTACT</a></li>
+        <li><a href="<?php bloginfo('url'); ?>/about/">プロフィール</a></li>
+        <li><a href="<?php bloginfo('url'); ?>/blog/">技術ブログ</a></li>
+        <li><a href="<?php bloginfo('url'); ?>/information/">メニュー</a></li>
+        <li><a href="<?php bloginfo('url'); ?>/contact/">お問い合わせ</a></li>
       </ul>
     </nav>
   </div>

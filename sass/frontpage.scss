@@ -1,0 +1,47 @@
+.frontpage {
+	&-header {
+		background: rgb(34,156,195);
+		background: radial-gradient(circle at -100px -150px, rgba(34,156,195,1) 0%, rgba(255,255,255,1) 50%);
+		margin-top: -70px;
+		padding: 150px 20px 100px;
+
+		&__wrapper {
+			@include wrapper();
+			@include flex();
+			align-items: center;
+			justify-content: space-between;
+		}
+		&__main {
+			width: 64%;
+		}
+		&__img {
+			width: 30%;
+		}
+		&__title {
+			font-size: fz(24);
+			font-weight: bold;
+			margin-bottom: 1.2em;
+		}
+		&__content p {
+			font-size: fz(18);
+			font-weight: 500;
+		}
+		&__btn {
+			@include btn();
+			margin: 1.5em auto 0;
+		}
+	}
+
+	&-services {
+		&__wrapper {
+			@include wrapper();
+		}
+		&__card {
+		}
+		&__text {
+		}
+	}
+}
+.dot-text {
+	text-emphasis: '\2B22' orange;
+}

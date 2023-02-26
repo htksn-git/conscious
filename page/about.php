@@ -4,9 +4,8 @@
 
   <section class="about-introduce">
     <div class="about-introduce__text">
-      <p>はじめまして！</p>
-      <p>プログラミングや技術的なことを学ぶのが大好きで、時短・効率といった分野に目がありません。この辺りは仕事というかもはや趣味とも言えると思います。日々新しいテクノロジーが生まれ、とても消化しきれるレベルではありませんが、まぁ要するにパソコンとネットがあれば大体機嫌よく過ごすことができるタイプです :)</p>
-      <p>趣味は月並みですが、音楽・読書・インテリア・海外旅行などです。自然やアウトドアが好きなひきこもりで、「大自然に囲まれながらハイテク家電と高速インターネットがある高性能古民家に暮らす」というのが理想です。コロナになってからまったく海外に行けなくなってしまったので残念でなりませんが、子供を授かることができたので仕事に育児にと日々奮闘しています。以下に個人の略歴をまとめています。</p>
+      <p>はじめまして！プログラミングや技術的なことを学ぶのが大好きで、時短・効率といった分野に目がありません。この辺りは仕事というかもはや趣味とも言えると思います。日々新しいテクノロジーが生まれ、とても消化しきれるレベルではありませんが、まぁ要するにパソコンとネットがあれば大体機嫌よく過ごすことができるタイプです :)</p>
+      <p>趣味は月並みですが、音楽・読書・インテリア・海外旅行などです。自然やアウトドアが好きなひきこもりで、「大自然に囲まれながら、ハイテク家電と高速インターネットがある高性能な古民家に暮らし、休みの日はその縁側でくつろぐ」というのが理想です。コロナ以降は、まったく海外に行けなくなってしまったので残念でなりませんが、子供を授かることができたので仕事に育児にと日々奮闘しています。以下に個人の略歴をまとめています。</p>
     </div>
     <div class="about-introduce__img">
       <img src="<?php bloginfo('url'); ?>/wp-content/img/page/about/me.jpg" alt="">
@@ -83,7 +82,7 @@
           <p class="about-timeline__date">1984</p>
           <div class="about-timeline__content">
             <h3 class="about-timeline__title">生まれ</h3>
-            <p>爆誕しました。ちなみに、僕が高校を卒業したちょうど次の年度から「学校週休二日制」が導入され、いわゆる「ゆとり教育」が始まったので、昭和のモーレツを知る最後の世代といえるかもしれません。</p>
+            <p>兵庫県神戸市で生まれました。ちなみに、僕が高校を卒業したちょうど次の年度から「学校週休二日制」が導入され、いわゆる「ゆとり教育」が始まったので、昭和のモーレツを知る最後の世代といえるかもしれません。</p>
           </div>
         </li>
         <li class="about-timeline__element">
@@ -104,7 +103,7 @@
           <p class="about-timeline__date">2008</p>
           <div class="about-timeline__content">
             <h3 class="about-timeline__title">雑貨の企画・卸商社で企画営業</h3>
-            <p>10 代のころから雑貨・インテリアが好きだった理由からこの会社に転職し、前職で身につけた DTP 経験を基に自社カタログ制作を担当する傍ら、大阪・九州エリアのベンダー・小売店の営業職を担当し、年商のおおよそ 8% に相当する売上げアップに貢献しました。</p>
+            <p>10 代のころから雑貨・インテリアが好きだった理由からこの会社に転職し、前職で身につけた DTP 経験を基に自社カタログ制作を担当する傍ら、大阪・九州エリアのベンダー・小売店の営業職を担当し、新たな商材・販路開拓を行い年商のおおよそ 8% に相当する売上げアップに貢献しました。</p>
           </div>
         </li>
         <li class="about-timeline__element">
@@ -112,14 +111,14 @@
           <div class="about-timeline__content">
             <h3 class="about-timeline__title">ウェブサイト制作の魅力に取り憑かれる</h3>
             <p>前述の雑貨を扱う商社にて、当時ブームとなっていた EC サイト展開の時流に乗っかる形となりましたが、社内でウェブに詳しい人間が一人もおらず、「前職で DTP やってたならウェブもできるでしょ？」という謎のロジックからウェブ担の任務を拝命することに。</p>
-            <p>最初は書籍を片手にあくせくやっていましたが、CSS がまったく理解できず、気がつけば会社帰りにスクールに通うという生活を一年近く送っていました。もともとデザインが好きだったことや、ウェブができるってなんかカッコいい</p>
+            <p>最初は書籍を片手にあくせくやっていましたが、CSS がまったく理解できず、気がつけば会社帰りにスクールに通うという生活を一年近く送っていました。もともとは、「ウェブができるってなんかカッコいい」という安直な動機ではありましたが、デザインが好きだったことも相まって、おもしろい分野を知ることができたと今だに感じています。</p>
           </div>
         </li>
         <li class="about-timeline__element">
           <p class="about-timeline__date">2012</p>
           <div class="about-timeline__content">
             <h3 class="about-timeline__title">Web 制作会社に入社</h3>
-            <p>好きが高じて</p>
+            <p>好きが高じて気がつけば Web 制作会社に入社していました。</p>
           </div>
         </li>
         <li class="about-timeline__element">
@@ -130,30 +129,16 @@
           </div>
         </li>
         <li class="about-timeline__element">
-          <p class="about-timeline__date">2023</p>
+          <p class="about-timeline__date">2019</p>
           <div class="about-timeline__content">
-            <h3 class="about-timeline__title"></h3>
+            <h3 class="about-timeline__title">プログラミングの威力に腰を抜かす</h3>
             <p></p>
           </div>
         </li>
         <li class="about-timeline__element">
-          <p class="about-timeline__date">2023</p>
+          <p class="about-timeline__date">現在</p>
           <div class="about-timeline__content">
-            <h3 class="about-timeline__title"></h3>
-            <p></p>
-          </div>
-        </li>
-        <li class="about-timeline__element">
-          <p class="about-timeline__date">2023</p>
-          <div class="about-timeline__content">
-            <h3 class="about-timeline__title"></h3>
-            <p></p>
-          </div>
-        </li>
-        <li class="about-timeline__element">
-          <p class="about-timeline__date">2023</p>
-          <div class="about-timeline__content">
-            <h3 class="about-timeline__title"></h3>
+            <h3 class="about-timeline__title">Web x プログラミング x デザインの力で猛進！</h3>
             <p></p>
           </div>
         </li>
@@ -161,10 +146,10 @@
     </div>
   </section>
 
-  <section class="about-business">
-    <h2 class="about-business__headline">Business</h2>
-    <div class="about-business__layer">
-      <table class="about-business__table">
+  <section class="about-information">
+    <h2 class="about-information__headline">Information</h2>
+    <div class="about-information__layer">
+      <table class="about-information__table">
         <tbody>
           <tr>
             <th>屋号</th>
@@ -172,12 +157,12 @@
           </tr>
           <tr>
             <th>運営者</th>
-            <td class="about-business__table-name"></td>
+            <td class="about-information__table-name"></td>
           </tr>
           <tr>
             <th>事業内容</th>
             <td>
-              <ul class="about-business__table-list">
+              <ul class="about-information__table-list">
                 <li>ウェブサイト制作</li>
                 <li>EC サイト構築</li>
                 <li>SEO 対策</li>

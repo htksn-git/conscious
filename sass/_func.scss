@@ -42,6 +42,11 @@ $breakpoints: (
     }
 }
 
+// font size ///////////////////////////////////////////////////////////////
+@function fz($font-size) {
+	@return ($font-size / 16) * 1rem;
+}
+
 // wrapper ///////////////////////////////////////////////////////////////
 @mixin wrapper($width: 90%, $max-width: 1200px) {
     margin-left: auto;
@@ -102,14 +107,28 @@ $breakpoints: (
 @mixin marker() {
     background: linear-gradient(transparent 60%,#ff6 60%);
 }
+.marker {
+	@include marker();
+}
 
 // button ///////////////////////////////////////////////////////////////
-@mixin btn($fz) {
+@mixin btn(
+		$bg1: #0093E9,
+		$bg2: linear-gradient(301deg, #0093E9 0%, #80D0C7 100%),
+		$fz: 18,
+		$w: 280px
+	) {
+	background-color: $bg1;
+	background-image: $bg2;
     border-radius: 50px;
-    display: block;
-    font-size: $fz;
+	color: #fff;
+	display: block;
+    font-size: fz($fz);
     font-weight: 500;
     letter-spacing: 0.04em;
+	line-height: 1.5;
+	padding: 8px 0;
     text-align: center;
     text-decoration: none;
+	width: $w;
 }

@@ -38,8 +38,8 @@ function get_description() {
 	elseif ( is_category('html') ) {
 		return 'HTMLに関するブログ記事の一覧のページです。';
 	}
-	elseif ( is_category('css') ) {
-		return 'CSSに関するブログ記事の一覧のページです。';
+	elseif ( is_category('css-sass') ) {
+		return 'ウェブデザインに不可欠な CSS / Sass (SCSS) に関するブログ記事の一覧のページです。一度 Sass の便利さを知ってしまうと、もう従来の CSS には戻れませんね。事実上、IE (Internet Explorer) が終了したため、CSS の表現力はこれからもっと大きなものになっていくのかもしれません。';
 	}
 	elseif ( is_category('git-github') ) {
 		return 'Git / GitHubに関するブログ記事の一覧のページです。';

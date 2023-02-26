@@ -41,8 +41,9 @@ function get_category_content() {
 	elseif ( is_category('html') ) {
 		$category_reference_lists = '[HTML Standard 日本語訳](https://momdo.github.io/html/)';
 	}
-	elseif ( is_category('css') ) {
-		$category_reference_lists = '[Can I use... Support tables for HTML5, CSS3, etc](https://caniuse.com/)';
+	elseif ( is_category('css-sass') ) {
+		$category_reference_lists = '[Can I use... Support tables for HTML5, CSS3, etc](https://caniuse.com/)
+		[Web制作者のためのSassの教科書 - 公式サポートサイト](https://book.scss.jp/code/)';
 	}
 	elseif ( is_category('git-github') ) {
 		$category_reference_lists = '[GitHub Documentation](https://docs.github.com/ja)

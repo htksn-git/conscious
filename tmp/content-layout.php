@@ -1,5 +1,11 @@
 <?php if ( !defined( 'ABSPATH' ) ) exit; ?>
 
+<?php if ( is_front_page() ): ?>
+<?php // トップページ
+get_template_part('page/frontpage'); ?>
+
+<?php else: ?>
+
 <?php // サイドバー非表示
   $no_sidebar = array(
     'about',
@@ -28,7 +34,7 @@ if(have_posts()): while(have_posts()): the_post(); ?>
 </header>
 
 <?php // サイドバー表示切り替え
-if ( is_page($no_sidebar) || is_front_page() ): ?>
+if ( is_page($no_sidebar) ): ?>
 <div class="content-wide content-<?php echo get_page_slug(); ?>">
 	<div class="content-wide-wrapper-<?php echo get_page_slug(); ?>">
 		<main class="content-wide-main">
@@ -60,3 +66,5 @@ endwhile; endif; ?>
   <?php // ページ下部コンテンツ
   get_template_part('tmp/bottom-nav'); ?>
 </aside>
+
+<?php endif; ?>

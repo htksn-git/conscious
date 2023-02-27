@@ -824,7 +824,7 @@ textarea {
 }
 .frontpage-services {
   background: #f5f4f3;
-  padding: 60px 0;
+  padding: 60px 0 10px;
 }
 .frontpage-services__main-title {
   font-size: 2rem;
@@ -915,6 +915,10 @@ textarea {
   margin-bottom: 1em;
   text-align: justify;
 }
+.frontpage-services__strong {
+  background: linear-gradient(transparent 60%, #ff6 60%);
+  font-weight: bold;
+}
 .frontpage-services__aside--red {
   background: #F9805C;
   border-radius: 8px;
@@ -983,34 +987,56 @@ textarea {
   margin: 1em auto;
   width: 90%;
 }
-.frontpage-services__calc-date-title {
-  width: 10em;
+.frontpage-services__calc-date-title--before {
+  background-position: 0 center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 10px 30px 10px 0;
+  padding-left: 25px;
+  background-image: url(http://localhost:8888/conscious/wp-content/img/icon/icon-cross-red.svg);
+}
+.frontpage-services__calc-date-title--after {
+  background-position: 0 center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 10px 30px 10px 0;
+  padding-left: 25px;
+  background-image: url(http://localhost:8888/conscious/wp-content/img/icon/icon-check.svg);
 }
 .frontpage-services__calc-date-detail {
+  margin: 10px 0;
+}
+.frontpage-services__calc-date-item {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  width: calc(100% - 12em);
 }
 .frontpage-services__calc-date-day {
+  line-height: 20px;
   text-align: center;
-  width: 4em;
+  width: 50px;
 }
 .frontpage-services__calc-date-month {
+  line-height: 20px;
   text-align: center;
-  width: 4em;
+  width: 60px;
 }
 .frontpage-services__calc-date-total {
   background: linear-gradient(transparent 60%, #ff6 60%);
-  font-weight: bold;
+  line-height: 20px;
   text-align: center;
-  width: 4em;
+  font-weight: bold;
+  width: 70px;
 }
 .frontpage-services__calc-icon-cross {
-  margin: 0 10px;
+  margin: 3px 10px 0 7px;
 }
 .frontpage-services__calc-icon-equal {
-  margin: 0 10px;
+  margin: 3px 10px 0 10px;
 }
 
 .dot-text {

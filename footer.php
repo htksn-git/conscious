@@ -24,12 +24,6 @@ get_template_part('tmp/modal'); ?>
       </ul>
     </nav>
 
-    <nav class="footer__nav">
-      <h3 class="sidebar__title">Categories</h3>
-      <?php // カテゴリー一覧
-      $args = ['pad_counts' => true];
-      get_template_part('tmp/categories-link', null, $args); ?>
-    </nav>
   </div>
   <div class="footer__copyright">&copy; <?php echo date('Y'); ?> conscious</div>
 </footer>

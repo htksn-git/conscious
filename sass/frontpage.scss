@@ -34,7 +34,7 @@
 
 	&-services {
 		background: #f5f4f3;
-		padding: 60px 0;
+		padding: 60px 0 10px;
 
 		&__main-title {
 			font-size: fz(32);
@@ -115,6 +115,11 @@
 			margin-bottom: 1em;
 			text-align: justify;
 		}
+		&__strong {
+			@include marker();
+			font-weight: bold;
+		}
+
 		@mixin services-aside($bg) {
 			background: $bg;
 			border-radius: 8px;
@@ -157,40 +162,63 @@
 			@include btn-bd($fz: 17);
 			margin: 25px auto 0;
 		}
+
+		@mixin calc-date-title() {
+			background-position: 0 center;
+			background-repeat: no-repeat;
+			background-size: 20px;
+			font-weight: 500;
+			line-height: 20px;
+			margin: 10px 30px 10px 0;
+			padding-left: 25px;
+		}
+		@mixin calc-date-elm() {
+			line-height: 20px;
+			text-align: center;
+		}
 		&__calc-date {
 			@include flex();
 			margin: 1em auto;
 			width: 90%;
 
 			&-title {
-				width: 10em;
+				&--before {
+					@include calc-date-title();
+					background-image: url(http://localhost:8888/conscious/wp-content/img/icon/icon-cross-red.svg);
+				}
+				&--after {
+					@include calc-date-title();
+					background-image: url(http://localhost:8888/conscious/wp-content/img/icon/icon-check.svg);
+				}
 			}
 			&-detail {
+				margin: 10px 0;
+			}
+			&-item {
 				@include flex();
 				align-items: center;
-				width: calc(100% - 12em);
 			}
 			&-day {
-				text-align: center;
-				width: 4em;
+				@include calc-date-elm();
+				width: 50px;
 			}
 			&-month {
-				text-align: center;
-				width: 4em;
+				@include calc-date-elm();
+				width: 60px;
 			}
 			&-total {
 				@include marker();
+				@include calc-date-elm();
 				font-weight: bold;
-				text-align: center;
-				width: 4em;
+				width: 70px;
 			}
 		}
 		&__calc-icon {
 			&-cross {
-				margin: 0 10px;
+				margin: 3px 10px 0 7px;
 			}
 			&-equal {
-				margin: 0 10px;
+				margin: 3px 10px 0 10px;
 			}
 		}
 	}

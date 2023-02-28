@@ -1,0 +1,60 @@
+.menu {
+	&__wrapper {
+		@include wrapper();
+		padding-top: 40px;
+	}
+	&__title {
+		font-size: fz(18);
+		font-weight: 500;
+		margin-bottom: 10px;
+	}
+	&__nav {
+        @include flex();
+    }
+	&-card {
+		@include col-3();
+		@include index-card();
+
+		&__title {
+			@include index-card-title();
+			position: relative;
+			display: flex;
+			align-items: center;
+
+			&::before {
+				content: '';
+				background-repeat: no-repeat;
+				display: block;
+				width: 40px;
+				height: 40px;
+				margin-right: 10px;
+				opacity: 0.6;
+			}
+			&--about::before {
+				background-image: url('http://localhost:8888/conscious/wp-content/img/icon/favourite-desktop.svg');
+			}
+			&--flow::before {
+				background-image: url('http://localhost:8888/conscious/wp-content/img/icon/shuffle-arrow.svg');
+			}
+			&--price::before {
+				background-image: url('http://localhost:8888/conscious/wp-content/img/icon/dollar-coin.svg');
+			}
+			&--contact::before {
+				background-image: url('http://localhost:8888/conscious/wp-content/img/icon/email.svg');
+			}
+			&--privacy-policy::before {
+				background-image: url('http://localhost:8888/conscious/wp-content/img/icon/lock-browser.svg');
+			}
+			&--map::before {
+				background-image: url('http://localhost:8888/conscious/wp-content/img/icon/location-point.svg');
+			}
+			&--docs::before {
+				background-image: url('http://localhost:8888/conscious/wp-content/img/icon/file.svg');
+			}
+		}
+		&__excerpt {
+			@include index-card-excerpt();
+			opacity: 0.8;
+		}
+	}
+}

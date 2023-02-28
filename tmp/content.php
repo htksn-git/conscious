@@ -1,7 +1,7 @@
 <?php if ( !defined( 'ABSPATH' ) ) exit; ?>
 
-<?php if ( is_page('information') ): ////////////////////////////////////////// ?>
-<?php get_template_part('page/information'); ?>
+<?php if ( is_page('menu') ): ////////////////////////////////////////// ?>
+<?php get_template_part('page/menu'); ?>
 
 <?php elseif ( is_page('about') ): ////////////////////////////////////////// ?>
 <?php get_template_part('page/about'); ?>

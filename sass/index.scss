@@ -4,53 +4,32 @@
     
     &-header {
         @include wrapper();
+		margin-bottom: 40px;
 
         &__title {
 			@include index-title();
+			margin-bottom: 30px;
         }
     }
-    &-card {
-        margin-top: 30px;
-
-        &__wrap {
-            @include flex();
-            @include wrapper();
-        }
-        &__href {
-            @include col-3();
-            background-color: #fff;
-			background-repeat: no-repeat;
-			background-size: 40px;
-			background-position: right 5px bottom 5px;
-            box-shadow: 0 4px 10px rgb(0 0 0 / 9%), 0 12px 18px -12px rgb(0 0 0 / 8%);
-            border-radius: 4px;
-            margin-bottom: 30px;
-            padding: 20px;
-			outline: 1px solid #fff;
-
-            &:hover {
-                box-shadow: none;
-				outline: 1px solid #dfdede;
-            }
-			&:not(.index-card__icon) {
-				background-image: url(http://localhost:8888/conscious/wp-content/img/common/arrow-right_bottom.svg);
-				background-size: 14px;
-			}
-
-            .post-meta {
-                color: #999;
-            }
-        }
-        &__excerpt {
-			font-size: 0.8rem;
-        }
-        &__title {
-            border-bottom: 1px solid #eee;
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 1.5;
-            margin-bottom: 10px;
-            padding-bottom: 10px;
-        }
-    }
+}
+.index-card {
+	&__wrap {
+		@include flex();
+		@include wrapper();
+	}
+	&__href {
+		@include col-3();
+		@include index-card();
+		background-size: 40px;
+		background-position: right 5px bottom 5px;
+	}
+	&__title {
+		@include index-card-title();
+	}
+	&__excerpt {
+		@include index-card-excerpt();
+	}
+	.post-meta {
+		color: #999;
+	}
 }

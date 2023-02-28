@@ -9,7 +9,7 @@ get_template_part('page/frontpage'); ?>
 <?php // サイドバー非表示
   $no_sidebar = array(
     'about',
-    'information',
+    'menu',
     'contact',
   );
 ?>

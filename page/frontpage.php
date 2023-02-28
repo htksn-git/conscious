@@ -45,28 +45,32 @@
 		<section class="frontpage-services__main">
 			<h3 class="frontpage-services__title">自動化プログラムによるバックオフィスの業務効率化</h3>
 			<p class="frontpage-services__text">例えば、月間総計で 3 日かかる作業ルーチンを毎月繰り返し行っていた場合、これをプログラムを使って自動化することで 30 分で終えることができるケースもあります。両者それぞれを年間で換算すると、以下のような差が付くことになります。</p>
-			<dl class=frontpage-services__calc-date>
-				<dt class=frontpage-services__calc-date-title--before>プログラム導入前</dt>
-				<dd class=frontpage-services__calc-date-detail>
-					<div class="frontpage-services__calc-date-item">
-						<span class="frontpage-services__calc-date-day">3 日</span>
-						<img src="<?php bloginfo('url'); ?>/wp-content/img/icon/calc-cross.svg" alt="" class="frontpage-services__calc-icon-cross">
-						<span class="frontpage-services__calc-date-month">12 ヶ月</span>
-						<img src="<?php bloginfo('url'); ?>/wp-content/img/icon/calc-equal.svg" alt="" class="frontpage-services__calc-icon-equal">
-						<span class="frontpage-services__calc-date-total">36 日</span>
-					</div>
-				</dd>
-				<dt class=frontpage-services__calc-date-title--after>プログラム導入後</dt>
-				<dd class=frontpage-services__calc-date-detail>
-					<div class="frontpage-services__calc-date-item">
-						<span class="frontpage-services__calc-date-day">30 分</span>
-						<img src="<?php bloginfo('url'); ?>/wp-content/img/icon/calc-cross.svg" alt="" class="frontpage-services__calc-icon-cross">
-						<span class="frontpage-services__calc-date-month">12 ヶ月</span>
-						<img src="<?php bloginfo('url'); ?>/wp-content/img/icon/calc-equal.svg" alt="" class="frontpage-services__calc-icon-equal">
-						<span class="frontpage-services__calc-date-total">360 分</span>
-					</div>
-				</dd>
-			</dl>
+			<div class="frontpage-services__calc">
+				<dl class=frontpage-services__calc-date>
+					<dt class=frontpage-services__calc-date-title--before>プログラム導入前</dt>
+					<dd class=frontpage-services__calc-date-detail>
+						<div class="frontpage-services__calc-date-item">
+							<span class="frontpage-services__calc-date-day">3 日</span>
+							<img src="<?php bloginfo('url'); ?>/wp-content/img/icon/calc-cross.svg" alt="" class="frontpage-services__calc-icon-cross">
+							<span class="frontpage-services__calc-date-month">12 ヶ月</span>
+							<img src="<?php bloginfo('url'); ?>/wp-content/img/icon/calc-equal.svg" alt="" class="frontpage-services__calc-icon-equal">
+							<span class="frontpage-services__calc-date-total">36 日</span>
+						</div>
+					</dd>
+				</dl>
+				<dl class=frontpage-services__calc-date>
+					<dt class=frontpage-services__calc-date-title--after>プログラム導入後</dt>
+					<dd class=frontpage-services__calc-date-detail>
+						<div class="frontpage-services__calc-date-item">
+							<span class="frontpage-services__calc-date-day">30 分</span>
+							<img src="<?php bloginfo('url'); ?>/wp-content/img/icon/calc-cross.svg" alt="" class="frontpage-services__calc-icon-cross">
+							<span class="frontpage-services__calc-date-month">12 ヶ月</span>
+							<img src="<?php bloginfo('url'); ?>/wp-content/img/icon/calc-equal.svg" alt="" class="frontpage-services__calc-icon-equal">
+							<span class="frontpage-services__calc-date-total">360 分</span>
+						</div>
+					</dd>
+				</dl>
+			</div>
 			<p class="frontpage-services__text">前者と後者を比較すると、プログラムを導入する前では年間で約 1.5 ヶ月分もの営業稼働時間を失っていることになります。時間コストは金銭コストに直結するだけでなく、集中力やモチベーションといった部分にも影響を与えます。<br>
 決められたルーチンをトレースする作業であれば、手作業で行うよりもコンピュータに任せた方がスピードは速く、また人的なケアレスミスを防ぐ意味でも多大なメリットがあります。</p>
 			<p class="frontpage-services__text">Excel でも関数やマクロなどを活用すれば複雑なデータの加工はある程度まで可能ですが、Python（パイソン）のようなプログラミング言語を駆使することで、二歩も三歩も踏み込んだ業務改善を実現できます。<br>

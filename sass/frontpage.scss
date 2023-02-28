@@ -64,6 +64,7 @@
 			}
 		}
 		@mixin services-section() {
+			max-width: 1600px;
 			position: relative;
 		}
 		@mixin services-section-arrow($c) {
@@ -176,41 +177,45 @@
 			line-height: 20px;
 			text-align: center;
 		}
-		&__calc-date {
-			@include flex();
-			margin: 1em auto;
-			width: 90%;
+		&__calc {
+			margin-bottom: 1em;
 
-			&-title {
-				&--before {
-					@include calc-date-title();
-					background-image: url(http://localhost:8888/conscious/wp-content/img/icon/icon-cross-red.svg);
-				}
-				&--after {
-					@include calc-date-title();
-					background-image: url(http://localhost:8888/conscious/wp-content/img/icon/icon-check.svg);
-				}
-			}
-			&-detail {
-				margin: 10px 0;
-			}
-			&-item {
+			&-date {
 				@include flex();
-				align-items: center;
-			}
-			&-day {
-				@include calc-date-elm();
-				width: 50px;
-			}
-			&-month {
-				@include calc-date-elm();
-				width: 60px;
-			}
-			&-total {
-				@include marker();
-				@include calc-date-elm();
-				font-weight: bold;
-				width: 70px;
+				margin: 0 auto;
+				width: 90%;
+
+				&-title {
+					&--before {
+						@include calc-date-title();
+						background-image: url(http://localhost:8888/conscious/wp-content/img/icon/icon-cross-red.svg);
+					}
+					&--after {
+						@include calc-date-title();
+						background-image: url(http://localhost:8888/conscious/wp-content/img/icon/icon-check.svg);
+					}
+				}
+				&-detail {
+					margin: 10px 0;
+				}
+				&-item {
+					@include flex();
+					align-items: center;
+				}
+				&-day {
+					@include calc-date-elm();
+					width: 50px;
+				}
+				&-month {
+					@include calc-date-elm();
+					width: 60px;
+				}
+				&-total {
+					@include marker();
+					@include calc-date-elm();
+					font-weight: bold;
+					width: 70px;
+				}
 			}
 		}
 		&__calc-icon {

@@ -1,35 +1,45 @@
 .footer {
-    @include header-background("http://localhost:8888/conscious/wp-content/img/background/footer.jpg", center, bottom, inherit);
-    margin-top: 50px;
-    min-height: 400px;
+    @include header-background("http://localhost:8888/conscious/wp-content/img/background/footer.jpg", center, 60%, inherit);
+	position: relative;
     
     &__wrap {
         @include flex();
-        justify-content: space-between;
-        padding: 50px;
+        padding: 50px 50px 70px 50px;
     }
     &__logo {
         display: block;
-        margin: 20px auto 20px;
+        margin: 10px auto 20px;
         width: 80%;
-		max-width: 200px;
+		max-width: 160px;
     }
     &__nav {
-        @include col-3();
         background: rgba(255, 255, 255, .3);
         border-radius: 4px;
-        padding: 20px;
+        padding: 20px 20px 20px 20px;
+		width: 90%;
+		max-width: 300px;
 
         a {
+			border-bottom: 1px solid rgba(255, 255, 255, .7);
             color: #fff;
+			display: block;
+			font-size: fz(14);
             font-weight: 500;
+			padding: 5px 8px;
+
+			&:hover {
+				background: rgba(255, 255, 255, .3);
+				color: var(--text-main);
+			}
         }
     }
     &__copyright {
-        color: #999;
+        color: #ccc;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 14px;
-        padding: 0 0 10px;
-        text-align: center;
+		font-size: fz(12);
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%);
     }
 }

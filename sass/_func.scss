@@ -31,10 +31,10 @@ table {
 
 // メディアクエリ ///////////////////////////////////////////////////////////////
 $breakpoints: (
-    's': 'screen and (min-width: 640px)',
-    'm': 'screen and (min-width: 768px)',
-    'l': 'screen and (min-width: 1024px)',
-    'xl': 'screen and (min-width: 1200px)',
+    'xl': 'screen and (max-width: 1200px)',
+    'l': 'screen and (max-width: 1024px)',
+    'm': 'screen and (max-width: 768px)',
+    's': 'screen and (max-width: 640px)',
 ) !default;
 @mixin mq($breakpoint: md) {
     @media #{map-get($breakpoints, $breakpoint)} {
@@ -63,7 +63,6 @@ $breakpoints: (
 
 // カラム分け ///////////////////////////////////////////////////////////////
 @mixin col-2() {
-    display: block;
     margin-right: 4%;
     width: 48%;
 
@@ -72,13 +71,17 @@ $breakpoints: (
     }
 }
 @mixin col-3() {
-    display: block;
     margin-right: 3%;
     width: 31.3333333333%;
 
     &:nth-child(3n) {
         margin-right: 0;
     }
+	
+	@include mq(s) {
+		margin-right: 0;
+		width: 100%;
+	}
 }
 
 // ページヘッダー ///////////////////////////////////////////////////////////////
@@ -101,21 +104,35 @@ $breakpoints: (
 	background-color: #fff;
 	background-repeat: no-repeat;
 	border-radius: 4px;
+	display: flex;
+	flex-direction: column;
 	margin-bottom: 30px;
-	padding: 20px;
+	padding: 15px 20px;
 	outline: 2px solid var(--text-main);
 
 	&:hover {
 		box-shadow: 0 6px 8px rgb(0 0 0 / 22%), 0 12px 28px -12px rgb(0 0 0 / 8%);
 	}
+
+	@include mq(s) {
+		margin-bottom: 20px;
+		padding: 10px 15px;
+	}
 }
 @mixin index-card-title() {
 	border-bottom: 1px solid var(--text-main);
-	font-size: 16px;
+	flex: 1;
+	font-size: fz(16);
 	font-weight: 500;
 	line-height: 1.5;
 	margin-bottom: 10px;
 	padding-bottom: 10px;
+	
+	@include mq(s) {
+		font-size: fz(15);
+		margin-bottom: 7px;
+		padding-bottom: 7px;
+	}
 }
 @mixin index-card-excerpt() {
 	font-size: 0.8rem;
@@ -132,6 +149,23 @@ $breakpoints: (
 }
 .marker {
 	@include marker();
+}
+@mixin badge($c: #fff) {
+	border-radius: 2px;
+	color: $c;
+	display: inline-block;
+	font-size: fz(12);
+	font-weight: 500;
+	line-height: 1;
+	margin-right: 5px;
+	padding: 3px 5px;
+}
+.badge--gray {
+	@include badge(var(--text-main));
+	background: #ddd;
+}
+@mixin dot-text($c) {
+	text-emphasis: '\2B22' $c;
 }
 
 // button ///////////////////////////////////////////////////////////////
@@ -172,4 +206,121 @@ $breakpoints: (
 	color: $color;
     font-size: fz($fz);
 	width: $w;
+}
+
+// frontpage ///////////////////////////////////////////////////////////////
+@mixin frontpage-heading() {
+	font-size: fz(32);
+	font-weight: bold;
+	margin: 10px 0 60px;
+	text-align: center;
+	
+	@include mq(s) {
+		font-size: fz(24);
+		margin: 10px 0 30px;
+	}
+}
+@mixin frontpage-heading-en($c) {
+	color: $c;
+	font-family: 'Oswald', sans-serif;
+	font-size: fz(24);
+	font-weight: bold;
+	text-align: center;
+	position: relative;
+
+	@include mq(s) {
+		font-size: fz(20);
+	}
+
+	&::after {
+		content: '';
+		background: $c;
+		display: block;
+		width: 50px;
+		height: 2px;
+		position: absolute;
+		margin: 5px auto 0;
+		left: 0;
+		right: 0;
+	}
+}
+@mixin frontpage-services-section() {
+	max-width: 1600px;
+	position: relative;
+	
+	@include mq(s) {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 50px;
+	}
+}
+@mixin frontpage-services-section-arrow($c) {
+	content: '';
+	display: block;
+	border-top: 50px solid $c;
+	border-left: 50px solid $c;
+	border-right: 50px solid transparent;
+	border-bottom: 50px solid transparent;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	@include mq(m) {
+		border-top: 30px solid $c;
+		border-left: 30px solid $c;
+		border-right: 30px solid transparent;
+		border-bottom: 30px solid transparent;
+		width: 30px;
+		height: 30px;
+	}
+}
+@mixin frontpage-services-aside($bg) {
+	background: $bg;
+	border-radius: 8px;
+	padding: 20px;
+	width: 300px;
+	position: absolute;
+	top: 60px;
+	right: 60px;
+	
+	@include mq(m) {
+		padding: 12px;
+		width: 230px;
+		top: 50px;
+		right: 40px;
+	}
+	@include mq(s) {
+		position: inherit;
+		top: inherit;
+		right: inherit;
+		width: 80%;
+		align-self: center;
+	}
+}
+@mixin frontpage-services-aside-text($color) {
+	color: $color;
+	font-size: fz(15);
+	font-weight: 500;
+	line-height: 1.6;
+	text-align: justify;
+	
+	@include mq(m) {
+		font-size: fz(14);
+	}
+}
+
+@mixin frontpage-calc-date-title() {
+	background-position: 0 center;
+	background-repeat: no-repeat;
+	background-size: 20px;
+	font-weight: 500;
+	line-height: 20px;
+	margin: 10px 30px 10px 0;
+	padding-left: 25px;
+}
+@mixin frontpage-calc-date-elm() {
+	line-height: 20px;
+	text-align: center;
 }

@@ -1,6 +1,10 @@
 .tab {
     &__wrap {
         margin: 30px auto;
+		
+		@include mq(s) {
+			margin: 30px auto 0;
+		}
     }
     &__btn-list {
         @include flex();

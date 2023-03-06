@@ -62,9 +62,11 @@ if ( is_page($no_sidebar) ): ?>
 <?php // ループ終了
 endwhile; endif; ?>
 
+<?php if ( ! is_front_page() && ! is_page() ): ?>
 <aside class="bottom-nav">
   <?php // ページ下部コンテンツ
   get_template_part('tmp/bottom-nav'); ?>
 </aside>
+<?php endif; ?>
 
 <?php endif; ?>

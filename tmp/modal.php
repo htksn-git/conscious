@@ -18,8 +18,8 @@
 					<ul class="modal-content__ul">
 						<li><a href="<?php bloginfo('url'); ?>/">HOME</a></li>
 						<li><a href="<?php bloginfo('url'); ?>/about/">ABOUT</a></li>
-						<li><a href="<?php bloginfo('url'); ?>/info/">INFO</a></li>
-						<li><a href="<?php bloginfo('url'); ?>/sitemap/">SITEMAP</a></li>
+						<li><a href="<?php bloginfo('url'); ?>/menu/">MENU</a></li>
+						<!-- <li><a href="<?php bloginfo('url'); ?>/sitemap/">SITEMAP</a></li> -->
 						<li><a href="<?php bloginfo('url'); ?>/privacy-pollicy/">PRIVACY POLICY</a></li>
 						<li><a href="<?php bloginfo('url'); ?>/contact/">CONTACT</a></li>
 					</ul>

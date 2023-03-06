@@ -16,6 +16,10 @@
     position: sticky;
     top: 0;
 
+	@include mq(s) {
+		display: none;
+	}
+
     &__section {
         margin-bottom: 50px;
     }

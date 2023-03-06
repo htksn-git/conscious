@@ -1,0 +1,20 @@
+.content-wide-wrapper-contact {
+	@include wrapper($width: 84%, $max-width: 600px);
+	padding-top: 50px;
+}
+
+.wpcf7 {
+	&-form-control-wrap {
+		display: block;
+		margin-bottom: 1rem;
+	}
+	&-submit {
+		background: var(--text-main);
+		color: #fff;
+		display: block;
+		margin: auto;
+		padding: 5px 0;
+		text-align: center;
+		width: 180px;
+	}
+}

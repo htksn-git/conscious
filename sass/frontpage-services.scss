@@ -1,0 +1,172 @@
+.frontpage-services {
+	background: #f5f4f3;
+	padding: 60px 0 10px;
+	
+	@include mq(s) {
+		padding: 40px 0 10px;
+	}
+	&__main-title {
+		@include frontpage-heading();
+		
+		&-en {
+			@include frontpage-heading-en(#CECBC0);
+		}
+	}
+	&__section {
+		&--red {
+			@include frontpage-services-section();
+			&::before {
+				@include frontpage-services-section-arrow(#F9805C);
+			}
+		}
+		&--yellow {
+			@include frontpage-services-section();
+			&::before {
+				@include frontpage-services-section-arrow(#F6C13D);
+			}
+		}
+		&--green {
+			@include frontpage-services-section();
+			&::before {
+				@include frontpage-services-section-arrow(#63B49B);
+			}
+		}
+	}
+	&__main {
+		background: #fff;
+		border-radius: 0 40px 40px 0;
+		margin-bottom: 60px;
+		padding: 60px 120px 60px 60px;
+		width: calc(100% - 300px);
+		
+		@include mq(m) {
+			padding: 40px 110px 60px 40px;
+			width: calc(100% - 200px);
+		}
+		@include mq(s) {
+			margin-bottom: -40px;
+			padding: 40px 40px 70px;
+			width: 96%;
+		}
+	}
+	&__title {
+		font-size: fz(22);
+		font-weight: bold;
+		line-height: 1.5;
+		margin-bottom: 30px;
+		
+		@include mq(s) {
+			font-size: fz(20);
+			margin-bottom: 20px;
+		}
+	}
+	&__text {
+		margin-bottom: 1em;
+		text-align: justify;
+
+		a {
+			color: var(--link);
+			font-weight: 500;
+		}
+	}
+	strong {
+		@include marker();
+		font-weight: bold;
+	}
+
+	&__aside {
+		&--red {
+			@include frontpage-services-aside(#F9805C);
+		}
+		&--yellow {
+			@include frontpage-services-aside(#F6C13D);
+		}
+		&--green {
+			@include frontpage-services-aside(#63B49B);
+		}
+		&-img {
+			margin-bottom: 10px;
+			width: 100%;
+		}
+		&-text {
+			&--black {
+				@include frontpage-services-aside-text(var(--text-main))
+			}
+			&--white {
+				@include frontpage-services-aside-text(#fff)
+			}
+		}
+	}
+	&__btn {
+		@include btn-bd($fz: 17);
+		margin: 25px auto 0;
+	}
+
+	&__calc {
+		margin-bottom: 1rem;
+		
+		@include mq(m) {
+			margin-bottom: 1.5em;
+		}
+
+		&-date {
+			@include flex();
+			margin: 0 auto;
+			width: 90%;
+
+			@include mq(m) {
+				margin: 1rem auto;
+			}
+			@include mq(s) {
+				width: 100%;
+			}
+
+			&-title {
+				&--before {
+					@include frontpage-calc-date-title();
+					background-image: url(http://localhost:8888/conscious/wp-content/img/icon/icon-cross-red.svg);
+				}
+				&--after {
+					@include frontpage-calc-date-title();
+					background-image: url(http://localhost:8888/conscious/wp-content/img/icon/icon-check.svg);
+				}
+			}
+			&-detail {
+				margin: 10px 0;
+				
+				@include mq(m) {
+					margin: 0 0 0 30px;
+				}
+				@include mq(s) {
+					margin: auto;
+				}
+			}
+			&-item {
+				@include flex();
+				align-items: center;
+			}
+			&-day {
+				@include frontpage-calc-date-elm();
+				width: 50px;
+			}
+			&-month {
+				@include frontpage-calc-date-elm();
+				width: 60px;
+			}
+			&-total {
+				@include marker();
+				@include frontpage-calc-date-elm();
+				font-weight: bold;
+				width: 70px;
+			}
+		}
+	}
+	&__calc-icon {
+		&-cross {
+			margin: 3px 10px 0 7px;
+		}
+		&-equal {
+			margin: 3px 10px 0 10px;
+		}
+	}
+}

@@ -8,6 +8,13 @@ function get_page_slug() {
 	return $slug;
 }
 
+// ページID 取得 ////////////////////////////////////
+function get_page_id() {
+	global $post;
+  $id = $post->ID;
+	return $id;
+}
+
 // カテゴリー名 取得（リンクなし） ////////////////////////////////////
 function get_category_name() {
 	global $post;

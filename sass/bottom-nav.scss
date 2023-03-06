@@ -7,20 +7,38 @@
     }
     &__category {
         @include wrapper();
-        
-        .categories-link {
+
+		@include mq(s) {
+			width: 100%;
+		}
+
+		.categories-link {
             @include flex();
             justify-content: center;
 			padding: 50px 0;
-
+			
+			@include mq(s) {
+				justify-content: start;
+				padding: 40px 0;
+			}
+	
             &__list {
                 margin: 5px 25px;
+				
+				@include mq(s) {
+					margin: 5px 10px;
+				}
             }
         }
         .category-icon {
             @include category-icon(36px, 46px, 40px);
-            font-size: 16px;
+            font-size: fz(16);
             font-weight: 500;
+			
+			@include mq(s) {
+				@include category-icon(30px, 40px, 34px);
+				font-size: fz(14);
+			}
         }
     }
 }

@@ -37,7 +37,7 @@
 <?php wp_head(); ?>
 </head>
 
-<body itemscope itemtype="https://schema.org/WebPage">
+<body itemscope itemtype="https://schema.org/WebPage" class="p-<?php echo get_page_id(); ?>">
 
 <header class="header" itemscope="" itemtype="https://schema.org/WPHeader">
   <div class="header__wrap" itemscope="" itemtype="https://schema.org/WebSite">

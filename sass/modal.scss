@@ -42,6 +42,10 @@
         transition: all .3s ease;
         z-index: 100;
 
+		@include mq(s) {
+			opacity: 1;
+		}
+
         &-btn {
             background: var(--text-main);
             display: block;

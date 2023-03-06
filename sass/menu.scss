@@ -14,20 +14,25 @@
 	&-card {
 		@include col-3();
 		@include index-card();
-
+		
 		&__title {
 			@include index-card-title();
-			position: relative;
 			display: flex;
 			align-items: center;
+			flex-grow: 0;
+			justify-content: space-between;
 
+			span {
+				flex-grow: 0;
+				width: calc(100% - 50px);
+			}
 			&::before {
 				content: '';
 				background-repeat: no-repeat;
+				background-size: 40px;
 				display: block;
 				width: 40px;
 				height: 40px;
-				margin-right: 10px;
 				opacity: 0.6;
 			}
 			&--about::before {

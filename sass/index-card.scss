@@ -1,0 +1,18 @@
+.index-card {
+	&__wrap {
+		@include flex();
+		@include wrapper();
+	}
+	&__href {
+		@include col-3();
+		@include index-card();
+		background-size: 40px;
+		background-position: right 5px bottom 5px;
+	}
+	&__title {
+		@include index-card-title();
+	}
+	&__excerpt {
+		@include index-card-excerpt();
+	}
+}

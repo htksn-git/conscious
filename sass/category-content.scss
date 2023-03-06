@@ -1,23 +1,43 @@
 .category-content {
 	background: #fff;
-	// outline: 1px solid #dfdede;
-	// outline-offset: -5px;
+	outline: 1px solid #dfdede;
+	outline-offset: -5px;
 	padding: 30px 40px 30px 30px;
 	
+	@include mq(s) {
+		padding: 30px;
+	}
+
 	&__wrapper {
 		@include flex();
 		align-items: center;
 		justify-content: space-between;
+
+		@include mq(s) {
+			flex-direction: column;
+		}
 	}
 	&__title {
 		@include index-title();
 		margin-bottom: 20px;
+		
+		@include mq(s) {
+			margin-bottom: 5px;
+		}
 	}
 	&__icon {
 		width: 120px;
+		
+		@include mq(s) {
+			width: 80px;
+		}
 	}
 	&__main {
 		width: calc(100% - 150px);
+
+		@include mq(s) {
+			width: 100%;
+		}
 	}
 	&__description {
 		font-size: 0.9rem;

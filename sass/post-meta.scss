@@ -1,17 +1,17 @@
 .post-meta {
     @include flex();
-    font-size: 0.7rem;
-    font-family: 'Oswald', sans-serif;
-    // font-weight: 500;
-
+	align-items: end;
+	
     * {
-        line-height: 1.5;
+		line-height: 1.5;
+		font-size: 0.7rem;
+		font-family: monospace;
     }
     dt, dd {
+		color: #999;
         margin: 2px 0;
     }
     dt {
-		color: #999;
         width: 80px;
     }
     dd {

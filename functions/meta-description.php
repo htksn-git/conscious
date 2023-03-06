@@ -5,7 +5,7 @@ function get_description() {
 	if ( is_front_page() ) {
 		return '兵庫県神戸市でホームページ制作を行っています。ワードプレスを使用した制作実績は100サイト以上！お気軽にご相談ください。';
 	}
-	elseif ( is_search() ) {
+	elseif ( is_search() || is_404() ) {
 		return '';
 	}
 	elseif ( is_home() ) {

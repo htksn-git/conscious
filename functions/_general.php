@@ -1,28 +1,36 @@
-<?php if ( !defined( 'ABSPATH' ) ) exit; ?>
-<?php
-
+<?php if ( !defined( 'ABSPATH' ) ) exit;
 // 管理画面バー非表示 ////////////////////////////////////
-add_filter('show_admin_bar', '__return_false');
+// add_filter('show_admin_bar', '__return_false');
 
 // CSS 読み込み ////////////////////////////////////
 function loading_css() {
+	wp_enqueue_style('reset',get_template_directory_uri().'/reset.css' );
 	wp_enqueue_style('style',get_template_directory_uri().'/style.css' );
 }
 add_action('wp_enqueue_scripts', 'loading_css');
+
+// 不要なCSSの読み込み停止 ////////////////////////////////////
+function remove_unuse_css() {
+	wp_dequeue_style('wp-block-library');
+	wp_dequeue_style('classic-theme-styles');
+}
+add_action( 'wp_enqueue_scripts', 'remove_unuse_css' ,9999);
 
 // JS 読み込み ////////////////////////////////////
 function load_js() {
 	wp_deregister_script('jquery'); // デフォルトjquery削除
 	wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js' );
-	wp_enqueue_script('pagetop', get_template_directory_uri().'/js/pagetop.js');
+	// wp_enqueue_script('pagetop', get_template_directory_uri().'/js/pagetop.js');
 	wp_enqueue_script('modal', get_template_directory_uri().'/js/modal.js'
 		, array( 'jquery' ), '', true);
-  wp_enqueue_script('copy-button', get_template_directory_uri().'/js/copy-button.js'
-		, array( 'jquery' ), '', true);
-  wp_enqueue_script('scroll-header', get_template_directory_uri().'/js/scroll-header.js'
-		, array( 'jquery' ), '', true);
-  wp_enqueue_script('tab-switch', get_template_directory_uri().'/js/tab-switch.js'
-		, array( 'jquery' ), '', true);
+	// wp_enqueue_script('modal', get_template_directory_uri().'/js/modal.js'
+	// 	, array( 'jquery' ), '', true);
+  // wp_enqueue_script('copy-button', get_template_directory_uri().'/js/copy-button.js'
+	// 	, array( 'jquery' ), '', true);
+  // wp_enqueue_script('scroll-header', get_template_directory_uri().'/js/scroll-header.js'
+	// 	, array( 'jquery' ), '', true);
+  // wp_enqueue_script('tab-switch', get_template_directory_uri().'/js/tab-switch.js'
+	// 	, array( 'jquery' ), '', true);
 }
 add_action('wp_enqueue_scripts', 'load_js');
 
@@ -45,4 +53,14 @@ function remove_my_global_styles() {
 	wp_dequeue_style( 'global-styles' );
 }
 
-?>
+// メインループの並び順を変更 ////////////////////////////////////
+function twpp_change_sort_order( $query ) {
+  if ( is_admin() || ! $query->is_main_query() ) {
+    return;
+  }
+  if ( $query->is_home() ) {
+    $query->set( 'order', 'DESC' );
+    $query->set( 'orderby', 'modified' );
+  }
+}
+add_action( 'pre_get_posts', 'twpp_change_sort_order' );

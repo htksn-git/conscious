@@ -7,30 +7,34 @@ const sass = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 // コンパイル後のcssファイル冒頭に任意の文字列を書き込む
 const header = require('gulp-header');
-const replace = require('gulp-replace');
+const replace = require('gulp-replace'); // 文字置換用
+// CSS圧縮
+const compressCSS = require('gulp-clean-css');
+// JavaScript圧縮
+const compressJS = require('gulp-uglify');
+// ファイルのリネーム
+const rename = require('gulp-rename');
 
-
-// プラグイン読み込み ////////////////////////////////////////////
-const filePath_scss = '../sass/*.scss';
-const filePath_css = '../';
+// 指定 ////////////////////////////////////////////
+const filePathSCSS = '../sass/*.scss';
+const filePathCSS = '../';
+const filePathJS = '../js/*.js';
+const filePathMinJS = '../js/min/';
 const header_content = `@charset "UTF-8";
-/* CSS Document */
-/*
+/*! CSS Document */
+/*!
 Theme Name: conscious
 */
 `;
 
-
 // タスク作成 ////////////////////////////////////////////
 gulp.task("default", () => {
-  // ★ style.scssファイルを監視
-  return gulp.watch(filePath_scss, () => {
-    // style.scssの更新があった場合の処理
-
-    // style.scssファイルを取得
+  // ★ .scssファイルを監視
+  return gulp.watch(filePathSCSS, () => {
+    // .scssファイルを取得
     return (
-      gulp.src(filePath_scss)
-      // 複数のSassファイルを結合
+      gulp.src(filePathSCSS)
+				// 複数のSassファイルを結合
         .pipe(concat('style.css'))
         // Sassのコンパイルを実行
         .pipe(
@@ -45,8 +49,30 @@ gulp.task("default", () => {
         .pipe(header(header_content))
         // 自動で付与される@charset指定を削除
         .pipe(replace(/@charset "UTF-8";/g, ''))
-        // 指定ディレクトリに保存
-        .pipe(gulp.dest(filePath_css))
+				// CSS圧縮
+        .pipe(compressCSS())
+
+				// CSS保存
+        .pipe(gulp.dest(filePathCSS))
     );
   });
 });
+
+// gulp.task("default", () => {
+//   // ★ JSファイルを監視
+//   return gulp.watch(filePathJS, () => {
+// 		// JSファイルを取得
+// 		gulp.src(filePathJS)
+// 			// 複数のJSファイルを結合
+// 			.pipe(concat('script.js'))
+// 			// JS圧縮
+// 			.pipe(compressJS())
+// 			// ファイルのリネーム
+// 			// .pipe(rename({
+// 			// 	extname: '.min.js'
+// 			// }))
+
+// 			// JS保存
+// 			.pipe(gulp.dest(filePathMinJS))
+//   });
+// });

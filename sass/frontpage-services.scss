@@ -124,11 +124,11 @@
 			&-title {
 				&--before {
 					@include frontpage-calc-date-title();
-					background-image: url(http://localhost:8888/conscious/wp-content/img/icon/icon-cross-red.svg);
+					background-image: url(https://conscs.net/wp-content/img/icon/icon-cross-red.svg);
 				}
 				&--after {
 					@include frontpage-calc-date-title();
-					background-image: url(http://localhost:8888/conscious/wp-content/img/icon/icon-check.svg);
+					background-image: url(https://conscs.net/wp-content/img/icon/icon-check.svg);
 				}
 			}
 			&-detail {

@@ -1,10 +1,12 @@
 <?php if ( !defined( 'ABSPATH' ) ) exit; ?>
 
+<?php if ( ! is_page('contact') ): ?>
 <nav class="bottom-nav__category">
   <?php // カテゴリー一覧
   $args = ['pad_counts' => false];
   get_template_part('tmp/categories-link', null, $args); ?>
 </nav>
+<?php endif; ?>
 
 <?php // コンテンツ
 get_template_part('tmp/modal'); ?>

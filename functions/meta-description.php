@@ -1,6 +1,4 @@
-<?php if ( !defined( 'ABSPATH' ) ) exit; ?>
-<?php
-
+<?php if ( !defined( 'ABSPATH' ) ) exit;
 function get_description() {
 	if ( is_front_page() ) {
 		return '兵庫県神戸市でホームページ制作を行っています。ワードプレスを使用した制作実績は100サイト以上！お気軽にご相談ください。';
@@ -55,5 +53,3 @@ function get_description() {
 		return $summary;
 	}
 }
-
-?>

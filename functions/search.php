@@ -1,6 +1,4 @@
-<?php if ( !defined( 'ABSPATH' ) ) exit; ?>
-<?php
-
+<?php if ( !defined( 'ABSPATH' ) ) exit;
 // サイト内検索を「投稿」に限定 ////////////////////////////////////
 function SearchFilter($query) {
   if ($query->is_search) {
@@ -41,5 +39,3 @@ function custom_search($search, $wp_query) {
 	return $search;
 }
 add_filter('posts_search','custom_search', 10, 2);
-
-?>

@@ -1,9 +1,9 @@
 .content {
     &-header {
-        @include header-background("http://localhost:8888/conscious/wp-content/img/single/main-visual.jpg", center, center, 500px);
+        @include header-background("https://conscs.net/wp-content/img/single/main-visual.jpg", center, center, 500px);
 		
 		@include mq(s) {
-			@include header-background("http://localhost:8888/conscious/wp-content/img/single/main-visual.jpg", 40%, center, 300px);
+			@include header-background("https://conscs.net/wp-content/img/single/main-visual.jpg", 40%, center, 300px);
 		}
 
         &__wrap {

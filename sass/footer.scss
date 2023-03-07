@@ -1,5 +1,5 @@
 .footer {
-    @include header-background("http://localhost:8888/conscious/wp-content/img/background/footer.jpg", center, 60%, inherit);
+    @include header-background("https://conscs.net/wp-content/img/background/footer.jpg", center, 60%, inherit);
 	position: relative;
     
     &__wrap {

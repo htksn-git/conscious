@@ -3,7 +3,7 @@
 <header class="frontpage-header">
 	<div class="frontpage-header__wrapper">
 		<section class="frontpage-header__main">
-			<h1 class="frontpage-header__title">個人〜中小企業のウェブ・IT を改善するのが得意です</h1>
+			<h1 class="frontpage-header__title">個人〜中小企業のウェブ・IT を<span class="sp-br">改善するのが得意です</span></h1>
 			<div class="frontpage-header__content">
 				<p>単純に「ホームページを作る」だけでは自己満足で終わってしまうため、<span class="frontpage-header__dot-text">実際の業務に活かせる</span>ウェブサイトの制作・業務支援を行っています。<br>
 				成果物を納品して終わりではなく、本当に必要なものを見極めて提供し、裏方のサポート役として伴走します。</p>
@@ -25,10 +25,10 @@
 	<div class="frontpage-services__section--red">
 		<section class="frontpage-services__main">
 			<h3 class="frontpage-services__title">更新が容易なウェブサイトづくり</h3>
-			<p class="frontpage-services__text">当店は、<strong>WordPress（ワードプレス）</strong>というシステムを利用したウェブサイト制作を主としています。</p>
+			<p class="frontpage-services__text">当店は、<strong>WordPress（ワードプレス）</strong>を利用したウェブサイト制作を主としています。</p>
 			<p class="frontpage-services__text"><span class="badge--gray">参考</span> <a href="<?php bloginfo('url'); ?>/wordpress/">ワードプレスについて</a></p>
 			<p class="frontpage-services__text">「ワードプレスでサイトを用意して、ブログを書いて、自社の商品・サービスに関するコンテンツを発信」といった内容は一般的によく言われます。<br>しかし、ブログを効果的かつ継続的にアップしていくことはそれほど簡単なことではありません。<br>
-また商用サイトの場合、ウェブサイトで本当に登録・更新したい箇所は、製品のスペックや価格といった、<strong>商品情報など販売・展開していくサービスの具体的な情報</strong>であるケースが多いように感じます。</p>
+また商用サイトの場合、ウェブサイトで本当に登録・更新したい箇所は、製品のスペックや価格といった、商品情報など販売・展開していくサービスの具体的な情報であるケースが多いように感じます。</p>
 			<p class="frontpage-services__text">ブログに限定せずこうしたビジネスに直接関係のある箇所も、<strong>必要な情報さえ入力すればサイトデザインなど見栄えを損なうことなく、容易に更新できる</strong>ようカスタマイズすることも可能です。<br>
 言わば、貴社専用の入力テンプレートを予め用意しておき、必要な情報さえ入力すれば、面倒な HTML の記述を必要とせず専門的な知識を持たない方でも体裁が整ったページを必要なだけ作成していけるといった環境が実現します。</p>
 			<p class="frontpage-services__text">また、Excel・スプレッドシートなどで管理しているマスタ情報のデータを加工して、一括でサイトに登録・変更するといった、効率を重視したウェブサイト管理といった方法のご提案も可能です。</p>

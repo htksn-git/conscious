@@ -1,6 +1,4 @@
-<?php if ( !defined( 'ABSPATH' ) ) exit; ?>
-<?php
-
+<?php if ( !defined( 'ABSPATH' ) ) exit;
 // 下書きの固定ページを親ページに設定できるようにする ////////////////////////////////////
 add_filter('page_attributes_dropdown_pages_args', 'add_private_draft');
 function add_private_draft($args) {
@@ -16,5 +14,3 @@ function is_parent_slug() {
     return $post_data->post_name;
   }
 }
-
-?>

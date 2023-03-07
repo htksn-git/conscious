@@ -1,6 +1,4 @@
-<?php if ( !defined( 'ABSPATH' ) ) exit; ?>
-
-<?php
+<?php if ( !defined( 'ABSPATH' ) ) exit;
 function gen_page_excerpts() {
 	global $post;
 	$slug = $post->post_name; //投稿スラッグを取得
@@ -33,4 +31,3 @@ function gen_page_excerpts() {
 		}
 	return '<p class="index-card__excerpt">' . $excerpt . '</p>';
 }
-?>

@@ -22,7 +22,7 @@
     &__wrapper {
         background: #f8f7f6;
         height: 100%;
-        padding: 40px 40px 30px 30px;
+        padding: 40px 30px;
         position: absolute;
         overflow-y: scroll;
         top: 0;
@@ -121,16 +121,22 @@ body.modal__enable {
         @include category-icon(36px, 42px, 50px);
         font-weight: 500;
     }
-	&__nav {
-		margin-top: 40px;
+
+	.search-form {
+		margin: 30px 0;
+
+		&__input {
+			padding: 5px 10px;
+		}
 	}
+
 	&__ul {
 		padding-left: 4px;
 
 		a {
 			font-size: 14px;
 			display: block;
-			padding-left: 30px;
+			padding: 3px 0 3px 30px;
 			position: relative;
 
 			&::before {

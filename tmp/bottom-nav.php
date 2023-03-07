@@ -25,7 +25,7 @@ get_template_part('tmp/prev-next-link'); ?>
 						'post_type' => 'post',
 						'category_name' => get_category_slug(),
 						'posts_per_page' => 6,
-						'orderby' => 'date',
+						'orderby' => 'modified',
 						'order' => 'DESC',
 						'post__not_in' => null,
 					];
@@ -40,7 +40,7 @@ get_template_part('tmp/prev-next-link'); ?>
 						'post_type' => 'post',
 						'category_name' => null,
 						'posts_per_page' => 6,
-						'orderby' => 'date',
+						'orderby' => 'modified',
 						'order' => 'DESC',
 						'post__not_in' => null,
 					];

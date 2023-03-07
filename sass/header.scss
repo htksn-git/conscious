@@ -43,7 +43,9 @@
         }
         a {
             display: block;
-            padding: 10px 15px;
+			height: 65px;
+			line-height: 65px;
+            padding: 0 15px;
 
             &:hover {
                 background: var(--text-main);
